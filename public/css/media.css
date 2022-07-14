@@ -1,0 +1,80 @@
+@media only screen and (max-width: 991px) {
+    .mobile{
+        display: block;
+    }
+    .barstog {
+        color: #fff;
+        font-size: 20px;
+        margin-top: 8px;
+    }
+    .navigation {
+        flex-wrap: wrap;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        background: #2c2c2c;
+        padding: 10px;
+        display: none;
+    }
+    .navigation.active {
+        display: block;
+    }
+    
+    .navigation ul {
+        flex-wrap: wrap;
+        gap: 10px !important;
+    }
+    
+    .navigation ul li {
+        width: 100%;
+    }
+    .bannerText .bannerHeader {
+        font-size: 30px;
+    }
+    
+    .servicesInr {
+        top: 0;
+    }
+    .servicesList ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0px;
+    }
+    
+    .servicesList ul li {
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+    .testmonialBx {
+        margin: 10px 0;
+    }
+    
+    .overflowTxt {
+        left: 0;
+        min-width: 1px;
+    }
+    
+    .floatImg {
+        position: static;
+    }
+    
+    .brandInr {
+        padding-right: 0px;
+    }
+    
+    .brandList {
+        flex-wrap: wrap;
+    }
+    
+    .brandList li {
+        width: 46%;
+        text-align: center;
+    }
+    .galleryImg img {
+        height: 100px;
+    }
+    .srvThumbnail {
+        padding: 55px 15px;
+    }
+}

@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap');
+body{
+    margin: 0;
+    padding: 72.5px 0 0;
+    font-family: 'Manrope', sans-serif;
+    scroll-padding: 70px 0 0 0px;
+}
+
+a,
+a:hover,
+a:focus {
+    text-decoration: none;
+    transition: all 400ms ease;
+}
+button{
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+}
+img {
+    max-width: 100%
+}
+.mobile{
+    display: none;
+}
+input,
+button {
+    outline: none;
+    box-shadow: none;
+}
+.gap-10{
+    gap: 10px !important;
+}
+.gap-20{
+    gap: 20px !important;
+}
+.gap-30{
+    gap: 30px !important;
+}
+.gap-50{
+    gap: 50px !important;
+}
+.gap-100{
+    gap: 100px !important;
+}
+.fullWidth{
+    width: 100%;
+}
+.mainHeader {
+    background: #363837!important;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 15px 0;
+    z-index: 9;
+}
+
+.listInline {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.navigation a {
+    color: #fff;
+    font-size: 15px;
+}
+
+.greenBtn {
+    padding: 10px 40px;
+    display: inline-flex;
+    background: #89ac76;
+    border-radius: 12px;
+    color: #fff;
+}
+.greenBtn:hover{
+    color:#fff;
+}
+.bannerText{
+    height: 100%;
+    padding: 3% 3% 3% 6%;
+}
+.banner{
+    background: rgba(34, 107, 208, 0.025) !important;
+}
+.bannerText .bannerHeader {
+    color: #182e4e;
+    font-size: 52px;
+    font-weight: 600;
+    margin:0px 0 30px;
+    text-align: left;
+}
+.servicesInr {
+    max-width: 90%;
+    background: #fff;
+    padding: 30px 50px;
+    margin: 0 auto;
+    box-shadow: rgb(196 196 196 / 30%) 0px 10px 100px;
+    position: relative;
+    top: -70px;
+}
+
+.servicesInr h2, .heading {
+    font-size: 32px;
+    font-weight: 600;
+    color: #182e4e;
+}
+
+.servicesInr p, .para {
+    font-size: 15px;
+    color: #130f26;
+    font-weight: 500;
+    opacity: .5;
+}
+.servicesList li {
+    padding: 15px 60px;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 30px 35px rgb(255 169 34 / 15%);
+    text-align: center;
+}
+
+.servicesList li span {
+    display: block;
+    color: #fff;
+    font-size: 13px;
+    margin-top: 7px;
+}
+
+.servicesList li.ser1 {
+    background: linear-gradient(315deg,#6074f7,#97b6ff);
+}
+
+.servicesList li.ser2 {
+    background: linear-gradient(315deg,#ffa61e,#ffcd47);
+}
+
+.servicesList li.ser3 {
+    background: linear-gradient(220.53deg,#9bf763,#26ab5b 76.95%),linear-gradient(155.43deg,#ff627a 2.5%,#ef0112 98.32%);
+}
+
+.servicesList li.ser4 {
+    background: linear-gradient(315deg,#6074f7,#97b6ff);
+}
+
+.servicesList li.ser5 {
+    background: linear-gradient(180deg,#bc94ff,#9f66ff);
+}
+
+.greenTxt {
+    color: #89ac76!important;
+}
+.srvContent h3 {
+    font-size: 22px;
+    color: #182e4e;
+    margin: 0 0 10px;
+}
+
+.srvContent p {
+    margin: 0;
+}
+.srvThumbnail{
+    background: url(../images/advantages_bg.png) right 0 no-repeat;
+    background-size: 500px 100%;
+}
+.srvThumbnail img {
+    max-height: 350px;
+    min-width: 330px;
+    object-fit: cover;
+    border: 15px solid #fff;
+}
+.visionImg img {
+    width: 100%;
+}
+
+.vision {
+    padding: 50px 0;
+}
+
+.overflowTxt {
+    min-width: 1000px;
+    background: #fff;
+    padding: 25px;
+    left: -50%;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.overflowTxtBx {
+    padding: 25px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: none;
+    transform: scale(1);
+    transition: all 500ms ease;
+    margin-bottom: 30px;
+}
+
+.overflowTxtBx h3 {
+    font-size: 20px;
+}
+
+.overflowTxtBx:hover {
+    background: linear-gradient(321.22deg,#89ac76 -144.13%,#b5e79a);
+    border-radius: 20px;
+    box-shadow: 0 30px 35px hsl(99deg 56% 74% / 60%);
+    -webkit-transform: scale(1.04);
+    transform: scale(1.04);
+    transition: all 500ms ease;
+}
+.testmonial .container {
+    padding: 50px;
+    background: url(../images/clients_bg.webp) 0 0 no-repeat;
+    background-size: cover;
+}
+
+.testmonial h2 {
+    text-align: center;
+    font-size: 45px;
+    margin: 0 0 30px;
+    color: #fff;
+}
+
+.testimonialUser img {
+    width: 90px;
+    border-radius: 12px;
+}
+
+.testimonialUser h4 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.testimonialUser ul li {
+    font-size: 14px;
+    color: #b5e79a;
+}
+
+.testimonialUser ul {
+    gap: 5px;
+}
+
+.testmonialBx > p {
+    font-size: 14px;
+    color: #111112;
+    opacity: 0.7;
+    min-height: 140px;
+}
+
+.testmonialBx {
+    padding: 20px 30px;
+    background: #fff;
+    border-radius: 20px;
+    transform: scale(1)!important;
+    transition: all 500ms ease;
+    box-shadow: none;
+}
+
+.testmonialBx:hover {
+    background: linear-gradient(321.22deg,#89ac76 -144.13%,#b5e79a)!important;
+    box-shadow: 0 30px 35px #233444;
+    -webkit-transform: scale(1.05)!important;
+    transform: scale(1.05)!important;
+    transition: all 500ms ease;
+}
+
+.testmonialBx:hover p {
+    color: #fff;
+}
+
+.testmonialBx:hover .testimonialUser ul li, .testmonialBx:hover .testimonialUser h4 {
+    color: #fff;
+}
+.Bekannt .container {
+    padding: 50px;
+    position: relative;
+    background: url(../images/knownfrom_bg.svg) 0 0 no-repeat;
+    background-size: cover;
+}
+
+section.Bekannt h2 {
+    font-size: 45px;
+    color: #fff;
+    margin: 0 0 40px;
+}
+.Bekannt p {
+    color: #fff;
+}
+.brandInr {
+    padding-right: 180px;
+}
+
+section.Bekannt {
+    margin: 50px 0;
+}
+
+.brandList li {
+    background: #fff;
+    border-radius: 20px;
+}
+
+.brandList li img {
+    height: 100px;
+    width: 150px;
+    object-fit: contain;
+    padding: 0 10px;
+}
+
+.brandList {
+    margin-top: 30px;
+}
+
+.floatImg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-height: 100%;
+}
+
+.galleryImg {
+    max-height: 500px;
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.galleryImg img {
+    width: calc(100%/4 - 5px);
+    height: 250px;
+    object-fit: cover;
+}
+
+footer {
+    background: #000;
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+    font-size: 15px;
+}
+
+footer a {
+    text-decoration: underline;
+}
+/*============contact-us==============*/
+.contactBanner{
+    background: url(../images/contact_banner.png) 0 0 no-repeat;
+    padding: 150px 0;
+    background-size: cover;
+}
+.contactBannerBx {
+    max-width: 500px;
+    background: #89ac76!important;
+    border-radius: 10.94px!important;
+    padding: 30px;
+}
+
+.contactBannerBx h1 {
+    color: #fff;
+}
