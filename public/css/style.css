@@ -363,3 +363,94 @@ footer a {
 .contactBannerBx h1 {
     color: #fff;
 }
+.contactContentInr{
+    background: url(../images/contact_note.png) 0 0 no-repeat;
+    background-size: cover;
+    padding: 20px;
+    display: flex;
+    justify-content: end;
+}
+.contactContentBx{
+    background: url(../images/contact_note_hl.png) 0 0 no-repeat;
+    background-size: cover;
+    padding: 30px 80px 30px 200px;
+}
+
+.contactContentBx h2 {
+    font-size: 30px;
+    color: #000;
+}
+
+.contactContentBx h3 {
+    font-size: 16px;
+    color: #000;
+    margin: 0 0 20px;
+}
+
+.contactContentBx h4 {
+    font-size: 13px;
+    color: #373737;
+}
+
+.contactContentBx p {
+    margin: 5px 0;
+    font-size: 15px;
+    color: #000;
+    font-weight: 500;
+}
+.form-floating>.form-control {
+    border: none;
+    border-bottom: solid 1px #ccc;
+    border-radius: 0px;
+    outline: none;
+    box-shadow: none;
+    padding: 0 5px;
+}
+
+.form-floating>label {
+    padding: 10px 0 0;
+    font-size: 22px;
+    color: #0000009c;
+}
+
+.form-floating>.form-control:focus~label, .form-floating>.form-control:not(:placeholder-shown)~label, .form-floating>.form-select~label {
+    font-size: 16px;
+}
+
+input#term {
+    border: solid 10px #000;
+    opacity: 0;
+}
+
+input#term + label:before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 1px;
+    left: -20px;
+    border: solid 2px #89ac76;
+}
+
+input#term + label {
+    position: relative;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+input#term:checked + label:after {
+    content: "";
+    content: "/f00c";
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+    position: absolute;
+    left: -16px;
+    top: 0px;
+    font-size: 19px;
+    color: #fff;
+}
+
+input#term:checked + label:before {
+    background: #89ac76;
+}

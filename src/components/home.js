@@ -68,8 +68,8 @@ const Home = () => {
                                 <img src='/images/Bezahlbare.svg' alt='' />
                             </div>
                             <div className='srvContent'>
-                                <h3>Bezahlbare Preise</h3>
-                                <p className='para mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing eli.</p>
+                                <h3>Maximaler Mehrwert</h3>
+                                <p className='para mb-0'>Unser Ziel ist es mit Ihnen das Beste zu erreichen.</p>
                             </div>
                         </div>
                         <div className='d-flex gap-30 align-items-center mb-4'>
@@ -77,8 +77,8 @@ const Home = () => {
                                 <img src='/images/Schnelle.svg' alt='' />
                             </div>
                             <div className='srvContent'>
-                                <h3>Schnelle Abwicklung</h3>
-                                <p className='para mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing eli.</p>
+                                <h3>Volle Transparenz </h3>
+                                <p className='para mb-0'>Sie haben zu jederzeit den vollen Überblick auf Alles.</p>
                             </div>
                         </div>
                         <div className='d-flex gap-30 align-items-center mb-4'>
@@ -86,8 +86,8 @@ const Home = () => {
                                 <img src='/images/Beste.svg' alt='' />
                             </div>
                             <div className='srvContent'>
-                                <h3>Beste Servicegarantie</h3>
-                                <p className='para mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing eli.</p>
+                                <h3>Best Service Garantie</h3>
+                                <p className='para mb-0'>Ihre Wünsche und Vorstellungen stehen im Mittelpunkt.</p>
                             </div>
                         </div>
                         <div className='d-flex gap-30 align-items-center mb-4'>
@@ -95,8 +95,8 @@ const Home = () => {
                                 <img src='/images/Keine.svg' alt='' />
                             </div>
                             <div className='srvContent'>
-                                <h3>Keine Maklergebühren</h3>
-                                <p className='para mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing eli.</p>
+                                <h3>Keine Kosten</h3>
+                                <p className='para mb-0'>Unser Service ist kostenfrei und von Maklerprovision ausgeschlossen.</p>
                             </div>
                         </div>
                     </div>
@@ -124,25 +124,25 @@ const Home = () => {
                                 <div className='col-md-6 col-12'>
                                     <div className='overflowTxtBx'>
                                         <h3>Vision</h3>
-                                        <p className='para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+                                        <p className='para'>Wir bringen dem Markt den Maximalen Mehrwert</p>
                                     </div>
                                 </div>
-                                <div className='col-md-6 col-12'>
+                                {/* <div className='col-md-6 col-12'>
                                     <div className='overflowTxtBx'>
                                         <h3>Strategischer Ort</h3>
                                         <p className='para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
                                     </div>
-                                </div>
+                                </div> */}
                                 <div className='col-md-6 col-12'>
                                     <div className='overflowTxtBx'>
                                         <h3>Mission</h3>
-                                        <p className='para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+                                        <p className='para'>Zusammen entwickeln wir Ihr Projekt </p>
                                     </div>
                                 </div>
                                 <div className='col-md-6 col-12'>
                                     <div className='overflowTxtBx'>
                                         <h3>Werte</h3>
-                                        <p className='para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+                                        <p className='para'>Entwicklung, Förderung und Nachhaltigkeit.</p>
                                     </div>
                                 </div>
                             </div>
@@ -222,7 +222,7 @@ const Home = () => {
             <div className='container'>
                <div className='brandInr' data-aos="fade-top" data-aos-offset="300">
                     <h2 className='heading'>Bekannt Aus</h2>
-                    <p className='para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit</p>
+                    <p className='para'>Hier gibt’s noch mehr über uns!</p>
                     <ul className='listInline brandList gap-20'>
                         <li><img src='/images/br1.png' alt='' /></li>
                         <li><img src='/images/br2.png' alt='' /></li>
@@ -238,7 +238,7 @@ const Home = () => {
                 <div className='d-flex justify-content-between align-items-center'>
                     <div className='d-block'>
                         <h2 className='heading'>Unsere Galerie</h2>
-                        <p className='para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volupat elit sed pretium, egestas sed sit.</p>
+                        <p className='para'>Kann erstmal raus.</p>
                     </div>
                     <a href='/' className='greenBtn'>Galerie ansehen</a>
                 </div>
