@@ -14,7 +14,7 @@ const Home = () => {
                             <p class="bannerHeader">Wir entwickeln Ihre Immobilie.</p>
                             <p class="para">"Maximaler Mehrwert, keine Maklerprovision"</p>
                         </div>
-                        <a href='/' class="greenTxt d-flex gap-30">Sichern Sie sich das erste Treffen <img src="/images/right_arrow.svg" alt="arrow" /></a>
+                        <a href='/' class="greenTxt d-flex gap-30">Erstgespräch Sichern <img src="/images/right_arrow.svg" alt="arrow" /></a>
                     </div>
                     <div class="col-md-6 col-12 p-0">
                         <div className='bannerImg'>
@@ -29,7 +29,7 @@ const Home = () => {
                 <div className='servicesInr' data-aos="fade-up" data-aos-offset="300">
                     <h2>Hier geht es zur Potenzialanalyse</h2>
                     <p className='d-flex gap-30'>Lassen Sie jetzt Ihre Immobilie schätzen - 
-                        <a href='/' className='greenTxt'>Frei <img src="/images/right_arrow.svg" alt="arrow" /></a>
+                        <a href='/' className='greenTxt'>Kostenlos <img src="/images/right_arrow.svg" alt="arrow" /></a>
                     </p>
                     <div className='servicesList'>
                         <ul className='listInline justify-content-between mt-4'>
@@ -39,19 +39,19 @@ const Home = () => {
                             </li>
                             <li className='ser2'>
                                 <img src='/images/Ein-Haus.svg' alt='' />
-                                <span>Ein Haus</span>
+                                <span>Haus</span>
                             </li>
                             <li className='ser3'>
                                 <img src='/images/Wohngebäude.svg' alt='' />
-                                <span>Wohngebäude</span>
+                                <span>Mehrfamilienhaus</span>
                             </li>
                             <li className='ser4'>
                                 <img src='/images/Geschäft.svg' alt='' />
-                                <span>Geschäft</span>
+                                <span>Gewerbe</span>
                             </li>
                             <li className='ser5'>
                                 <img src='/images/Eigentum.svg' alt='' />
-                                <span>Eigentum</span>
+                                <span>Grundstück</span>
                             </li>
                         </ul>
                     </div>
