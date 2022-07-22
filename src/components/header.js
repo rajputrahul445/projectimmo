@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import ScrollspyNav from "react-scrollspy-nav";
 
 const Header = () => {
     const navToggleHandle = (e) => {
