@@ -82,7 +82,7 @@ const Contact = () => {
                         <div className='d-flex justify-content-between align-items-center contactBtn'>
                             <div className='d-flex align-items-center gap-10'>
                                 <input type='checkbox' name='' id='term'/>
-                                <label htmlFor='term'>Ich akzeptier die Datenschutzerklärung</label>
+                                <label htmlFor='term'>Ich akzeptiere die Datenschutzerklärung</label>
                             </div>
                             <button className='greenBtn px-5 border-0' onClick={()=>submit()}>SENDEN</button>
                         </div>

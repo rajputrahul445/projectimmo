@@ -108,4 +108,7 @@
     .contactBtn button{
         margin: 20px 0;
     }
+    .contact_form_content .form-floating.mb-4.mt-5 {
+        margin-top: 0 !important;
+    }
 }
