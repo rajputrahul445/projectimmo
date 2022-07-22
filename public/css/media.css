@@ -1,4 +1,7 @@
 @media only screen and (max-width: 991px) {
+    body {
+        padding-top: 65px;
+    }
     .mobile{
         display: block;
     }
@@ -76,5 +79,33 @@
     }
     .srvThumbnail {
         padding: 55px 15px;
+    }
+    .contact_detail {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .contact_detail_content {
+        display: block !important;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .contact_detail_content img{
+        margin-bottom: 10px;
+    }
+    .contact_form_content {
+        display: block !important;
+    }
+    
+    .contactContentBx {
+        padding: 30px;
+        background-size: 100% 100%;
+    }
+    .contactBtn{
+        flex-wrap: wrap;
+    }
+    .contactBtn button{
+        margin: 20px 0;
     }
 }

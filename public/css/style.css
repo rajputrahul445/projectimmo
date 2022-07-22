@@ -318,8 +318,8 @@ section.Bekannt {
 .floatImg {
     position: absolute;
     right: 0;
-    top: 0;
-    max-height: 100%;
+    top: -80px;
+    height: 420px;
 }
 
 .galleryImg {
