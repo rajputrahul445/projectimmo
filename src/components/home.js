@@ -9,14 +9,14 @@ const Home = () => {
         <section className='banner' id='start'>
             <div className='container-fluid'>
                 <div className='row'>
-                    <div class="bannerText col-md-6 col-12">
-                        <div class="animate__animated animate__slideInLeft">
-                            <p class="bannerHeader">Wir entwickeln Ihre Immobilie.</p>
-                            <p class="para">"Maximaler Mehrwert, keine Maklerprovision"</p>
+                    <div className="bannerText col-md-6 col-12">
+                        <div className="animate__animated animate__slideInLeft">
+                            <p className="bannerHeader">Wir entwickeln Ihre Immobilie.</p>
+                            <p className="para">"Maximaler Mehrwert, keine Maklerprovision"</p>
                         </div>
-                        <a href='/' class="greenTxt d-flex gap-30">Erstgespräch Sichern <img src="/images/right_arrow.svg" alt="arrow" /></a>
+                        <a href='/' className="greenTxt d-flex gap-30">Erstgespräch Sichern <img src="/images/right_arrow.svg" alt="arrow" /></a>
                     </div>
-                    <div class="col-md-6 col-12 p-0">
+                    <div className="col-md-6 col-12 p-0">
                         <div className='bannerImg'>
                             <img src='/images/banner.png' alt='' className='img-fluid'/>
                         </div>
@@ -58,7 +58,7 @@ const Home = () => {
                 </div>
             </div>
         </section>
-        <section className='srvList' id='Vorteile'>
+        <section className='srvList pt-3' id='Vorteile'>
             <div className='container'>
                 <div className='row'>
                     <div className='col-md-6 col-12' data-aos="fade-right" data-aos-offset="300">
@@ -153,7 +153,7 @@ const Home = () => {
         </section>
         <section className='testmonial' id='Unsere'>
             <div className='container'>
-                <h2>Unsere Kunden Sagen</h2>
+                <h2 className='heading'>Unsere Kunden Sagen</h2>
                 <div className='row'>
                     <div className='col-md-4 col-12' data-aos="fade-top" data-aos-offset="300">
                         <div className='testmonialBx'>
@@ -165,11 +165,11 @@ const Home = () => {
                                 <div className='testimonialUser'>
                                     <h4>Olaf S</h4>
                                     <ul className='listInline'>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i className="fas fa-star"></i></li>
+                                        <li><i className="fas fa-star"></i></li>
+                                        <li><i className="fas fa-star"></i></li>
+                                        <li><i className="fas fa-star"></i></li>
+                                        <li><i className="fas fa-star"></i></li>
                                     </ul>
                                 </div>
                             </div>
@@ -185,11 +185,11 @@ const Home = () => {
                                 <div className='testimonialUser'>
                                     <h4>Brigitte M</h4>
                                     <ul className='listInline'>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i className="fas fa-star"></i></li>
+                                        <li><i className="fas fa-star"></i></li>
+                                        <li><i className="fas fa-star"></i></li>
+                                        <li><i className="fas fa-star"></i></li>
+                                        <li><i className="fas fa-star"></i></li>
                                     </ul>
                                 </div>
                             </div>
@@ -205,11 +205,11 @@ const Home = () => {
                                 <div className='testimonialUser'>
                                     <h4>Simon F</h4>
                                     <ul className='listInline'>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i className="fas fa-star"></i></li>
+                                        <li><i className="fas fa-star"></i></li>
+                                        <li><i className="fas fa-star"></i></li>
+                                        <li><i className="fas fa-star"></i></li>
+                                        <li><i className="fas fa-star"></i></li>
                                     </ul>
                                 </div>
                             </div>

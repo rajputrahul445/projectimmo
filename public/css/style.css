@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap');
+html{
+    scroll-padding-top: 70px;
+}
 body{
     margin: 0;
     padding: 72.5px 0 0;
     font-family: 'Manrope', sans-serif;
-    scroll-padding: 70px 0 0 0px;
+    
 }
 
 a,
@@ -17,7 +20,7 @@ button{
     box-shadow: none;
     cursor: pointer;
 }
-section{
+section:not(.services){
     overflow: hidden;
 }
 img {
@@ -106,7 +109,7 @@ button {
 }
 
 .servicesInr h2, .heading {
-    font-size: 32px;
+    font-size: 6vmin;
     font-weight: 600;
     color: #182e4e;
 }
@@ -221,7 +224,6 @@ button {
 
 .testmonial h2 {
     text-align: center;
-    font-size: 45px;
     margin: 0 0 30px;
     color: #fff;
 }
@@ -284,7 +286,6 @@ button {
 }
 
 section.Bekannt h2 {
-    font-size: 45px;
     color: #fff;
     margin: 0 0 40px;
 }
