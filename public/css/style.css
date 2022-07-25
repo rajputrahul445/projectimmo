@@ -455,3 +455,97 @@ input#term:checked + label:after {
 input#term:checked + label:before {
     background: #89ac76;
 }
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #000000b5;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popupInr {
+    width: 600px;
+    background: #fff;
+    padding: 30px;
+    position: relative;
+}
+
+.form h1 {
+    font-size: 30px;
+    text-align: center;
+    margin: 0 0 15px;
+}
+
+.form-group {
+    margin: 0 0 15px;
+}
+
+.form h3 {
+    font-size: 20px;
+}
+
+.form-control {
+    height: auto;
+    padding: 12px 20px;
+    border: 1px solid #9d9d9d;
+    border-radius: 0;
+    color: #004b54;
+    box-shadow: none;
+    outline: none;
+    resize: none;
+}
+.closeBtn {
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    width: 40px;
+    height: 40px;
+    background: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 20px;
+    box-shadow: 0 0 10px #000;
+    cursor: pointer;
+}
+.customRadio label {
+    padding: 10px 90px;
+    background: #fff;
+    cursor: pointer;
+    border: solid 2px #D9D9D9;
+    color: grey;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.customRadio input {
+    display: none;
+}
+
+.customRadio input:checked + label {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+.customRadio label:before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: #D9D9D9;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.customRadio input:checked + label:before {
+    background: #fff;
+}

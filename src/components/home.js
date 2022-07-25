@@ -1,11 +1,95 @@
-import React from 'react';
+import React, {useState} from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Form from './forms/form';
 AOS.init({once: true});
 
 const Home = () => {
+    const [popup, setPopup] = useState(false);
+    const [floor, setfloor] = useState(false);
+    const [units, setUnits] = useState(false);
+    const [gewerbe, setGewerbe] = useState(false);
+    const [grundstück, setGrundstück] = useState(false);
+    const [stepCount, setStepCount] = useState(1);
+
+    const [unitsValue, setUnitsValue] = useState('');
+    const [constructionYear, setConstructionYear] = useState('');
+    const [surface, setSurface] = useState('');
+    const [room, setRoom] = useState('');
+    const [floorValue, setFloorValue] = useState('');
+    // const [formData, setFormData] = useState({
+    //     units:'',
+    //     construction_year:'',
+    //     room:'',
+    //     Erbpacht:'',
+    //     floor:'',
+    //     Teilungserklärung:'',
+    //     Bebauung:'',
+    //     surface:'',
+    //     Grundrisse:'',
+    //     Fotos:'',
+    //     Anhänge:'',
+    //     kommentar:'',
+    //     Bundesland:'',
+    //     Postleitzahl:'',
+    //     Wunschpreis:'',
+    //     Email:'',
+    //     Straße:''
+    // })
+    
+    const popupHandle = () => {
+        setPopup(!popup);
+        setfloor(false);
+        setUnits(false);
+        setGewerbe(false);
+        setGrundstück(false);
+        setStepCount(1);
+    }
+    const houseHandle = () => {
+        setfloor(true);
+    }
+    const unitsHandle = () => {
+        setUnits(true);
+    }
+    const gewerbeHandle = () => {
+        setGewerbe(true);
+    }
+    const grundstückHandle = () => {
+        setGrundstück(true);
+    }
+    const nextStep = (e) => {
+        e.preventDefault();
+        setStepCount( stepCount + 1);
+    }
+    const backStep = (e) => {
+        e.preventDefault();
+        setStepCount( stepCount - 1);
+    }
+    const handleInputChange = (e) => {
+        const {name , value} = e.target;
+        if(name === "unitsValue"){
+            setUnitsValue(value);
+        }
+        if(name === "constructionYear"){
+            setConstructionYear(value);
+        }
+        if(name === "surface"){
+            setSurface(value);
+        }
+        if(name === "room"){
+            setRoom(value);
+        }
+        if(name === "floorValue"){
+            setFloorValue(value);
+        }
+    }
+    const formSubmit = (e) => {
+        e.preventDefault();
+        //sconsole.log(formData)
+    }
   return (
     <React.Fragment>
+        {popup ? <Form popupHandle={popupHandle} floor={floor} units={units} gewerbe={gewerbe} grundstück={grundstück} stepCount={stepCount} nextStep={nextStep} backStep={backStep} formSubmit={formSubmit} handleInputChange={handleInputChange} unitsValue={unitsValue} constructionYear={constructionYear} surface={surface} room={room} floorValue={floorValue}/>: null }
         <section className='banner' id='start'>
             <div className='container-fluid'>
                 <div className='row'>
@@ -33,23 +117,23 @@ const Home = () => {
                     </p>
                     <div className='servicesList'>
                         <ul className='listInline justify-content-between mt-4'>
-                            <li className='ser1'>
+                            <li className='ser1' onClick={popupHandle}>
                                 <img src='/images/Wohnung.svg' alt='' />
                                 <span>Wohnung</span>
                             </li>
-                            <li className='ser2'>
+                            <li className='ser2' onClick={() => { popupHandle(); houseHandle();}}>
                                 <img src='/images/Ein-Haus.svg' alt='' />
                                 <span>Haus</span>
                             </li>
-                            <li className='ser3'>
+                            <li className='ser3' onClick={() => { popupHandle(); unitsHandle();}}>
                                 <img src='/images/Wohngebäude.svg' alt='' />
                                 <span>Mehrfamilienhaus</span>
                             </li>
-                            <li className='ser4'>
+                            <li className='ser4' onClick={() => { popupHandle(); gewerbeHandle();}}>
                                 <img src='/images/Geschäft.svg' alt='' />
                                 <span>Gewerbe</span>
                             </li>
-                            <li className='ser5'>
+                            <li className='ser5' onClick={() => { popupHandle(); grundstückHandle();}}>
                                 <img src='/images/Eigentum.svg' alt='' />
                                 <span>Grundstück</span>
                             </li>
@@ -256,6 +340,7 @@ const Home = () => {
                 <img src='/images/gl2.png' alt='' />
             </div>
         </section>
+        
     </React.Fragment>
   )
 }
