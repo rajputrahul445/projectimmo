@@ -150,4 +150,7 @@
         right: 0;
         top: 0;
     }
+    .servicesInr h2 {
+        margin-bottom: 20px;
+    }
 }

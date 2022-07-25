@@ -1,6 +1,8 @@
 import React,{useState} from 'react'
 import "./common.css";
-import db from "../firebase.js";
+import axios from "axios";
+import API_HOST from './API_ENDPOINTS/API_HOST';
+import API_ENDPOINTS from './API_ENDPOINTS/API_ENDPOINTS';
 
 const Contact = () => {
 
@@ -23,17 +25,26 @@ const Contact = () => {
     const [email, setEmail] = useState("");
     const [note, setNote] = useState("");
 
-
+    // const handleInputChange = (e) => {
+    //     setName(e.target.value);
+    //     setEmail(e.target.value);
+    //     setNote(e.target.value);
+    // }
     const submit = (e) => {
-        db.collection("customersData").add({
-            name: name,
-            email: email,
-            note: note
+        const postData = {
+            "name" : name,
+            "email" : email,
+            "fare" : note
+        }
+        let baseURL = API_HOST.baseUrl + API_ENDPOINTS.addEnquiry;
+        const headers = {
+            'Content-Type': 'text/plain'
+        };
+        axios.post(baseURL, postData, headers )
+        .then((response) => {
+            console.log(response.data);
         });
-
-        setName("");
-        setEmail("");
-        setNote("");
+        
     };
 
 

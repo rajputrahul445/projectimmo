@@ -183,7 +183,7 @@ const Home = () => {
         </section>
         <section className='services'>
             <div className='container'>
-                <div className='servicesInr' data-aos="fade-up" data-aos-offset="300" data-aos-duration="1300">
+                <div className='servicesInr' data-aos="fade-up" data-aos-offset="300" data-aos-duration="1000">
                     <h2>Hier geht es zur Potenzialanalyse</h2>
                     <p className='d-flex gap-30'>Lassen Sie jetzt Ihre Immobilie schätzen - 
                         <a href='/' className='greenTxt'>Kostenlos <img src="/images/right_arrow.svg" alt="arrow" /></a>
@@ -218,7 +218,7 @@ const Home = () => {
         <section className='srvList pt-3' id='Vorteile'>
             <div className='container'>
                 <div className='row'>
-                    <div className='col-md-6 col-12' data-aos="fade-right" data-aos-offset="300" data-aos-duration="1300">
+                    <div className='col-md-6 col-12' data-aos="fade-right" data-aos-offset="300" data-aos-duration="1000">
                         <h2 className='heading mb-4'>Vorteile von IMONDO</h2>
                         <div className='d-flex gap-30 align-items-center mb-4'>
                             <div className='srvIco'>
@@ -257,7 +257,7 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='col-md-6 col-12 srvThumbnail d-flex align-items-center' data-aos="fade-left" data-aos-offset="300" data-aos-duration="1300">
+                    <div className='col-md-6 col-12 srvThumbnail d-flex align-items-center' data-aos="fade-left" data-aos-offset="300" data-aos-duration="1000">
                         <img src='/images/advantages_bg.png' alt='' />
                     </div>
                 </div>
@@ -266,15 +266,15 @@ const Home = () => {
         <section className='vision' id='Vision'>
             <div className='container'>
                 <div className='row'>
-                    <div className='col-md-6 col-12' data-aos="fade-right" data-aos-offset="300" data-aos-duration="1300">
+                    <div className='col-md-6 col-12' data-aos="fade-right" data-aos-offset="300" data-aos-duration="1000">
                         <div className='visionImg'>
                             <img src='/images/vision_bg.jpeg' alt='' />
                         </div>
                     </div>
-                    <div className='col-md-6 col-12' data-aos="fade-left" data-aos-offset="300" data-aos-duration="1300">
+                    <div className='col-md-6 col-12' data-aos="fade-left" data-aos-offset="300" data-aos-duration="1000">
                         <div className='visionContent'>
                             <h2 className='heading'>Vision, Missionswerte</h2>
-                            <p className='para'>Unser Ziel ist eine Win-Win-Situation. Durch unsereinzigartiges Konzept erhöhen wir denGewinn des Verkäufers, ermöglichen eine schnelle Umsetzung und schaffengleichzeitighochwertigen Wohnraum. Werde mit IMONDO zum Immobilienvisionär</p>
+                            <p className='para'>Unser Ziel ist eine Win-Win-Situation. Durch unser einzigartiges Konzept erhöhen wir den Gewinn des Verkäufers, ermöglichen eine schnelle Umsetzung und schaffen gleichzeitighochwertigen Wohnraum. Werde mit IMONDU zum Immobilienvisionär</p>
                         </div>
                         <div className='overflowTxt'>
                             <div className='row'>
@@ -312,7 +312,7 @@ const Home = () => {
             <div className='container'>
                 <h2 className='heading'>Unsere Kunden Sagen</h2>
                 <div className='row'>
-                    <div className='col-md-4 col-12' data-aos="fade-top" data-aos-offset="300" data-aos-duration="1300">
+                    <div className='col-md-4 col-12' data-aos="fade-top" data-aos-offset="300" data-aos-duration="1000">
                         <div className='testmonialBx'>
                             <p>Ich habe mein Mehrfamilienhaus in Bad Lauchstädt über Imondu entwickeln und verkaufen lassen. Wir konnten mehr als meinen Wunschpreis erzielen und das Geschäft in wenigen Wochen abwickeln, dazu kommen nette und interessante Menschen mit denen man arbeiten will.</p>
                             <div className='d-flex gap-20'>
@@ -332,7 +332,7 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='col-md-4 col-12' data-aos="fade-top" data-aos-offset="300" data-aos-duration="1300">
+                    <div className='col-md-4 col-12' data-aos="fade-top" data-aos-offset="300" data-aos-duration="1000">
                         <div className='testmonialBx'>
                             <p>Projektes war und ich dadurch neue Erfahrungen Sammeln konnte mit Menschen die ihre gerne Teilen und Ideen für nahezu jedes Problem haben. Freue mich auf zukünftige Projekte.</p>
                             <div className='d-flex gap-20'>
@@ -352,7 +352,7 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='col-md-4 col-12' data-aos="fade-top" data-aos-offset="300" data-aos-duration="1300">
+                    <div className='col-md-4 col-12' data-aos="fade-top" data-aos-offset="300" data-aos-duration="1000">
                         <div className='testmonialBx'>
                             <p>Das könnte fast zu meinem neuen Hobby werden. Gut gelaunte Mitarbeiter die einem helfen wirklich das beste aus seinem Objekt zu holen. Bin gespannt wo die Reise noch hingeht.</p>
                             <div className='d-flex gap-20'>
@@ -377,7 +377,7 @@ const Home = () => {
         </section>
         {/* <section className='Bekannt'>
             <div className='container'>
-               <div className='brandInr' data-aos="fade-top" data-aos-offset="300" data-aos-duration="1300">
+               <div className='brandInr' data-aos="fade-top" data-aos-offset="300" data-aos-duration="1000">
                     <h2 className='heading'>Bekannt Aus</h2>
                     <p className='para'>Hier gibt’s noch mehr über uns!</p>
                     <ul className='listInline brandList gap-20'>
