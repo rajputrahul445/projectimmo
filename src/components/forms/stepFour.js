@@ -1,16 +1,16 @@
 import React from 'react'
 
-const StepFour = ({popupHandle, stepCount, formSubmit, backStep}) => {
+const StepFour = ({popupHandle, stepCount, formSubmit, backStep, handleInputChange, desiredPrice, email, phoneNumber}) => {
   return (
     <div className='form'>
         <div className='form-group'>
-            <input type='text' name='Wunschpreis' placeholder='Was ist ihr Wunschpreis?' className='form-control' />
+            <input type='text' name='desiredPrice' placeholder='Was ist ihr Wunschpreis?' className='form-control' onChange={(e)=> handleInputChange(e)} value={desiredPrice}/>
         </div>
         <div className='form-group'>
-            <input type='text' name='Email' placeholder='Email' className='form-control' />
+            <input type='text' name='email' placeholder='Email' className='form-control' onChange={(e)=> handleInputChange(e)} value={email} />
         </div>
         <div className='form-group'>
-            <input type='text' name='Straße' placeholder='Telefonnummer' className='form-control'/>
+            <input type='text' name='phoneNumber' placeholder='Telefonnummer' className='form-control' onChange={(e)=> handleInputChange(e)} value={phoneNumber}/>
         </div>
         <ul className='listInline gap-10 justify-content-between'>
             {stepCount === 0

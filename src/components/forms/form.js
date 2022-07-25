@@ -4,7 +4,7 @@ import StepFour from './stepFour';
 import StepSecond from './stepSecond';
 import StepThree from './stepThree';
 
-const Form = ({popupHandle, floor, units, gewerbe, grundstück, stepCount, nextStep, backStep, formSubmit, handleInputChange, unitsValue, constructionYear, surface, room, floorValue}) => {
+const Form = ({popupHandle, floor, units, gewerbe, grundstück, stepCount, nextStep, backStep, formSubmit, handleInputChange, unitsValue, constructionYear, surface, room, floorValue, kommentar, federalState, postalCode, streetHouseNumber, desiredPrice, email, phoneNumber}) => {
   return (
     <>
     <div className='popup'>
@@ -14,28 +14,28 @@ const Form = ({popupHandle, floor, units, gewerbe, grundstück, stepCount, nextS
             {
                 stepCount === 1
                 ?
-                <StepFirst popupHandle={popupHandle} floor={floor} units={units} gewerbe={gewerbe} grundstück={grundstück} stepCount={stepCount} nextStep={nextStep} backStep={backStep} handleInputChange={handleInputChange} unitsValue={unitsValue} constructionYear={constructionYear} surface={surface} room={room} floorValue={floorValue}/>
+                <StepFirst popupHandle={popupHandle} floor={floor} units={units} gewerbe={gewerbe} grundstück={grundstück} stepCount={stepCount} nextStep={nextStep} backStep={backStep} handleInputChange={handleInputChange} unitsValue={unitsValue} constructionYear={constructionYear} surface={surface} room={room} floorValue={floorValue} />
                 :
                 null
             }
             {
                 stepCount === 2
                 ?
-                <StepSecond popupHandle={popupHandle}  stepCount={stepCount} nextStep={nextStep} backStep={backStep}/>
+                <StepSecond popupHandle={popupHandle}  stepCount={stepCount} nextStep={nextStep} backStep={backStep} handleInputChange={handleInputChange} kommentar={kommentar} />
                 :
                 null
             }
             {
                 stepCount === 3
                 ?
-                <StepThree popupHandle={popupHandle}  stepCount={stepCount} nextStep={nextStep} backStep={backStep}/>
+                <StepThree popupHandle={popupHandle}  stepCount={stepCount} nextStep={nextStep} backStep={backStep} handleInputChange={handleInputChange} federalState={federalState} postalCode={postalCode} streetHouseNumber={streetHouseNumber}/>
                 :
                 null
             }
             {
                 stepCount === 4
                 ?
-                <StepFour popupHandle={popupHandle}  stepCount={stepCount} formSubmit={formSubmit} backStep={backStep}/>
+                <StepFour popupHandle={popupHandle}  stepCount={stepCount} formSubmit={formSubmit} backStep={backStep} handleInputChange={handleInputChange} desiredPrice={desiredPrice} email={email} phoneNumber={phoneNumber}/>
                 :
                 null
             }

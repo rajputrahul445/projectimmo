@@ -14,7 +14,7 @@ const Contact = () => {
             icon: "/images/phone_icon.svg"
         },
         {
-            text: "Info@imandu.de",
+            text: "info@imondu.de",
             icon: "/images/mail_icon.svg"
         },
     ];

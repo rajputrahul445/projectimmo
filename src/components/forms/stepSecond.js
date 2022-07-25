@@ -1,6 +1,6 @@
 import React from 'react'
 
-const StepSecond = ({popupHandle, stepCount, nextStep, backStep}) => {
+const StepSecond = ({popupHandle, stepCount, nextStep, backStep, handleInputChange, kommentar}) => {
   return (
     <div className='form'>
         <div className='form-group'>
@@ -17,7 +17,7 @@ const StepSecond = ({popupHandle, stepCount, nextStep, backStep}) => {
         </div>
         <div className='form-group'>
             <label>Kommentar</label>
-            <textarea placeholder="kommentar" cols="30" rows="6" class="form-control" name='kommentar'></textarea>
+            <textarea placeholder="kommentar" cols="30" rows="6" className="form-control" name='kommentar' value={kommentar} onChange={(e)=> handleInputChange(e)}></textarea>
         </div>
         <ul className='listInline gap-10 justify-content-between'>
             {stepCount === 0

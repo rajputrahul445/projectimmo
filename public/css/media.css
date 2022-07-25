@@ -104,11 +104,50 @@
     }
     .contactBtn{
         flex-wrap: wrap;
+        justify-content: center;
     }
     .contactBtn button{
-        margin: 20px 0;
+        width: 160px;
+        margin: 20px auto;
+        text-align: center;
+        display: block;
     }
     .contact_form_content .form-floating.mb-4.mt-5 {
         margin-top: 0 !important;
+    }
+    .servicesInr > p {
+        flex-wrap: wrap;
+    }
+    .srvList {
+        padding: 40px 0 0 !important;
+    }
+    
+    .srvList .heading {
+        margin: 0 0 40px !important;
+    }
+    .visionImg{
+        margin-bottom: 20px;
+    }
+    .visionContent .heading {
+        margin: 10px 0 10px;
+    }
+    .popupInr {
+        width: 90%;
+        max-height: 90vh;
+        overflow: auto;
+    }
+    
+    .customRadio label {
+        padding: 10px 30px;
+    }
+    
+    .popupInr .px-5 {
+        padding-right: 30px !important;
+        padding-left: 30px !important;
+    }
+    
+    .closeBtn {
+        right: 0;
+        top: 0;
     }
 }

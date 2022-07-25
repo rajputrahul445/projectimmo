@@ -44,13 +44,13 @@ const StepFirst = ({popupHandle, floor, units, gewerbe, grundstück, stepCount, 
                 <ul className='listInline gap-20 mb-3'>
                     <li>
                         <div className='customRadio'>
-                            <input type='radio' id='Teilungserklärung_ja' value='' name='Teilungserklärung' defaultChecked={true} onChange={(e)=> handleInputChange(e)}/>
+                            <input type='radio' id='Teilungserklärung_ja' value='ja' name='Teilungserklärung' defaultChecked={true} onChange={(e)=> handleInputChange(e)}/>
                             <label htmlFor='Teilungserklärung_ja'>Ja</label>
                         </div>
                     </li>
                     <li>
                         <div className='customRadio'>
-                            <input type='radio' id='Teilungserklärung_nein' name='Teilungserklärung' />
+                            <input type='radio' id='Teilungserklärung_nein' name='Teilungserklärung' value="Nein" onChange={(e)=> handleInputChange(e)}/>
                             <label htmlFor='Teilungserklärung_nein'>Nein</label>
                         </div>
                     </li>
@@ -63,13 +63,13 @@ const StepFirst = ({popupHandle, floor, units, gewerbe, grundstück, stepCount, 
         <ul className='listInline gap-20 mb-3'>
             <li>
                 <div className='customRadio'>
-                    <input type='radio' id='ja' name='Erbpacht' defaultChecked={true} onChange={(e)=> handleInputChange(e)}/>
+                    <input type='radio' id='ja' name='Erbpacht' defaultChecked={true} value="ja" onChange={(e)=> handleInputChange(e)}/>
                     <label htmlFor='ja'>Ja</label>
                 </div>
             </li>
             <li>
                 <div className='customRadio'>
-                    <input type='radio' id='nein' name='Erbpacht' />
+                    <input type='radio' id='nein' name='Erbpacht' value="Nein" onChange={(e)=> handleInputChange(e)}/>
                     <label htmlFor='nein'>Nein</label>
                 </div>
             </li>
@@ -80,13 +80,13 @@ const StepFirst = ({popupHandle, floor, units, gewerbe, grundstück, stepCount, 
                 <ul className='listInline gap-20 mb-3'>
                     <li>
                         <div className='customRadio'>
-                            <input type='radio' id='Bebauung_ja' name='Bebauung' defaultChecked={true}/>
+                            <input type='radio' id='Bebauung_ja' name='Bebauung' defaultChecked={true} value="ja" onChange={(e)=> handleInputChange(e)}/>
                             <label htmlFor='Bebauung_ja'>Ja</label>
                         </div>
                     </li>
                     <li>
                         <div className='customRadio'>
-                            <input type='radio' id='Bebauung_nein' name='Bebauung' />
+                            <input type='radio' id='Bebauung_nein' name='Bebauung' value="Nein" onChange={(e)=> handleInputChange(e)}/>
                             <label htmlFor='Bebauung_nein'>Nein</label>
                         </div>
                     </li>
