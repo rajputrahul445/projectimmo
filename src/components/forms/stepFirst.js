@@ -99,11 +99,11 @@ const StepFirst = ({popupHandle, floor, units, gewerbe, grundstück, stepCount, 
         <ul className='listInline gap-10 justify-content-between'>
             {stepCount === 1
                 ?
-                <li><button className="btn btn-secondary py-3 px-5 border-0" onClick={popupHandle}>SCHLIESSEN</button></li>
+                <li><button className="btn btn-cancel py-3 px-5 border-0" onClick={popupHandle}>SCHLIESSEN</button></li>
                 :
-                <li><button className="btn btn-secondary py-3 px-5 border-0" onClick={backStep}>Zurück</button></li>
+                <li><button className="btn btn-cancel py-3 px-5 border-0" onClick={backStep}>Zurück</button></li>
             }
-            <li><a href="/" className="btn btn-dark py-3 px-5 border-0" onClick={nextStep}>Weiter</a></li>
+            <li><a href="/" className="btn btn-submit py-3 px-5 border-0" onClick={nextStep}>Weiter</a></li>
         </ul>
         
     </div>

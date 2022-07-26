@@ -15,11 +15,11 @@ const StepFour = ({popupHandle, stepCount, formSubmit, backStep, handleInputChan
         <ul className='listInline gap-10 justify-content-between'>
             {stepCount === 0
                 ?
-                <li><button className="btn btn-secondary py-3 px-5 border-0" onClick={popupHandle}>SCHLIESSEN</button></li>
+                <li><button className="btn btn-cancel py-3 px-5 border-0" onClick={popupHandle}>SCHLIESSEN</button></li>
                 :
-                <li><button className="btn btn-secondary py-3 px-5 border-0" onClick={backStep}>Zurück</button></li>
+                <li><button className="btn btn-cancel py-3 px-5 border-0" onClick={backStep}>Zurück</button></li>
             }
-            <li><button type='submit' className="btn btn-dark py-3 px-5 border-0" onClick={formSubmit}>Senden</button></li>
+            <li><button type='submit' className="btn btn-submit py-3 px-5 border-0" onClick={formSubmit}>Senden</button></li>
         </ul>
     </div>
   )
