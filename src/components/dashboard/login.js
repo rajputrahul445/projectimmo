@@ -23,7 +23,7 @@ const Login = () =>{
             "email" : email,
             "password" : password
         }
-        let baseURL = API_HOST.baseUrl + API_ENDPOINTS.addEnquiry;
+        let baseURL = API_HOST.baseUrl + API_ENDPOINTS.login;
         const headers = {
             'Content-Type': 'text/plain'
         };

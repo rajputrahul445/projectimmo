@@ -4,7 +4,7 @@ html{
 }
 body{
     margin: 0;
-    padding: 72.5px 0 0;
+    padding: 0 0 0;
     font-family: 'Manrope', sans-serif;
     
 }
@@ -51,6 +51,9 @@ button {
 }
 .fullWidth{
     width: 100%;
+}
+section#start, .contact_page {
+    padding-top: 70px;
 }
 .mainHeader {
     background: #363837!important;
@@ -556,8 +559,92 @@ input#term:checked + label:before {
     box-shadow: 0 0 10px #00000054;
 }
 .middleForm {
-    min-height: calc(100vh - 130px);
+    min-height: calc(100vh);
     padding: 50px 0;
     align-items: center;
     display: flex;
+}
+
+.pageWrp {
+    display: flex;
+}
+.unorderList {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.sidebar {
+    flex-basis: 250px;
+    background: #363837;
+    min-height: 100vh;
+    border-radius: 0;
+}
+.sidebar.shrink {
+    flex-basis: 95px;
+    min-width: 95px;
+}
+.sidebar.shrink + .rightArea {
+    flex-basis: calc(100% - 95px);
+    max-width: calc(100% - 95px);
+}
+.sidebar.shrink .sidebarList li a {
+    justify-content: center;
+    flex-wrap: wrap;
+    display: block;
+    text-align: center;
+}
+.sidebar.shrink .sidebarList li a span {
+    display: block;
+    font-size: 12px;
+    text-align: center;
+}
+.rightArea {
+    flex-basis: calc(100% - 250px);
+    padding: 10px 20px 20px;
+    max-width: calc(100% - 250px);
+}
+
+.sidebarBrand {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.sidebar.shrink .sidebarBrand {
+    padding: 20px 10px;
+}
+.sidebarBrand a {
+    font-size: 20px;
+    color: #fff;
+}
+.sidebarList li a {
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    position: relative;
+}
+.sidebarList li a:before, .sidebarList li.active a:before {
+    width: 5px;
+    height: 100%;
+    background: #fff;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 0 10px 10px 0;
+    opacity: 0;
+}
+
+.sidebarList li a:hover:before, .sidebarList li.active a:before {
+    opacity: 1;
+}
+.sidebarList li a:hover {
+    background: #282828;
+}
+
+.sidebarList li .border {
+    border: 1px solid #40414A !important;
+    border-bottom: none !important;
 }
