@@ -29,9 +29,19 @@ const Login = () =>{
         };
         axios.post(baseURL, postData, headers )
         .then((response) => {
-            console.log(postData);
+            console.log(response);
+            if(response.data.errorCode !== '0000'){
+                setEmailError('Email not found');
+                setPasswordError('Password did not match');
+                return false;
+            }
+            localStorage.setItem('token', response.data.token);
+            localStorage.setItem('userName', response.data.userName);
+            localStorage.setItem('userId', response.data.userId);
             navigate("/dashboard");
-        });
+        }).catch( (error)=> {
+            console.log(error);
+          });
         
     };
   return (
@@ -40,11 +50,11 @@ const Login = () =>{
             <h1 className="heading text-center mb-4">Sign in</h1>
             <div className="form-group">
                 <input type="email" className="form-control" placeholder='Email' value={email} onChange={(e)=>setEmail(e.target.value)}/>
-                <span>{emailError}</span>
+                <span className='error'>{emailError}</span>
             </div>
             <div className="form-group">
-                <input type="email" className="form-control" placeholder='Password' value={password} onChange={(e)=>setPassword(e.target.value)}/>
-                <span>{passwordError}</span>
+                <input type="password" className="form-control" placeholder='Password' value={password} onChange={(e)=>setPassword(e.target.value)}/>
+                <span className='error'>{passwordError}</span>
             </div>
             <div className="form-group mb-0">
                 <button className="greenBtn fullWidth border-0 justify-content-center" onClick={submit}>Login</button>

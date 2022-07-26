@@ -648,3 +648,32 @@ input#term:checked + label:before {
     border: 1px solid #40414A !important;
     border-bottom: none !important;
 }
+.error {
+    color: #c50505;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+.topHeader {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.dropdown a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #000;
+}
+.dropdown-menu {
+    left: -10px;
+    min-width: 1px;
+    box-shadow: 4px 6px 10px #0000002e;
+}
+
+.dropdown-menu a {
+    font-size: 14px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}

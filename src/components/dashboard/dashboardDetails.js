@@ -1,79 +1,72 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Message from './message';
+import axios from "axios";
+import API_HOST from '../API_ENDPOINTS/API_HOST';
+import API_ENDPOINTS from '../API_ENDPOINTS/API_ENDPOINTS';
 
 const DashboardDetails = () => {
+    useEffect(()=>{
+
+    }, [])
+    const getMessage = () => {
+        axios.get('/user?ID=12345')
+            .then(function (response) {
+                // handle success
+                console.log(response);
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
+            .then(function () {
+                // always executed
+            });
+    };
   return (
     <div className='d-block p-3'>
         <div className='row'>
             <div className='col-md-3 col-12 mb-3'>
-                <div class="card">
-                    <div class="card-body">
+                <div className="card">
+                    <div className="card-body">
                         <h3>0</h3>
-                        <h5 class="card-title">Wohnung</h5>
+                        <h5 className="card-title">Wohnung</h5>
                     </div>
                 </div>
             </div>
             <div className='col-md-3 col-12 mb-3'>
-                <div class="card">
-                    <div class="card-body">
+                <div className="card">
+                    <div className="card-body">
                         <h3>0</h3>
-                        <h5 class="card-title">Haus</h5>
+                        <h5 className="card-title">Haus</h5>
                     </div>
                 </div>
             </div>
             <div className='col-md-3 col-12 mb-3'>
-                <div class="card">
-                    <div class="card-body">
+                <div className="card">
+                    <div className="card-body">
                         <h3>0</h3>
-                        <h5 class="card-title">Mehrfamilienhaus</h5>
+                        <h5 className="card-title">Mehrfamilienhaus</h5>
                     </div>
                 </div>
             </div>
             <div className='col-md-3 col-12 mb-3'>
-                <div class="card">
-                    <div class="card-body">
+                <div className="card">
+                    <div className="card-body">
                         <h3>0</h3>
-                        <h5 class="card-title">Gewerbe</h5>
+                        <h5 className="card-title">Gewerbe</h5>
                     </div>
                 </div>
             </div>
             <div className='col-md-3 col-12 mb-3'>
-                <div class="card">
-                    <div class="card-body">
+                <div className="card">
+                    <div className="card-body">
                         <h3>0</h3>
-                        <h5 class="card-title">Grundstück</h5>
+                        <h5 className="card-title">Grundstück</h5>
                     </div>
                 </div>
             </div>
             <div className='col-12'>
-            <table class="table">
-                <thead>
-                    <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    </tr>
-                    <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    </tr>
-                    <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                    </tr>
-                </tbody>
-                </table>
+                <Message />
             </div>
         </div>
     </div>

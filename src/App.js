@@ -11,7 +11,7 @@ import Dashboard from './components/dashboard/dashboard';
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      {/* <BrowserRouter>
       {!window.location.href.includes('/dashboard')
         ?
         <Header />
@@ -21,8 +21,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="dashboard/login" element={<Login />} />
-          <Route path="dashboard" element={<Dashboard />} />
         </Routes>
         {!window.location.href.includes('/dashboard')
           ?
@@ -30,7 +28,33 @@ function App() {
           :
           null
         }
-      </BrowserRouter>
+      </BrowserRouter> */}
+      {
+        !window.location.href.includes('/dashboard')
+        ?
+        <BrowserRouter>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="contact" element={<Contact />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      :
+      null
+      }
+      {
+        window.location.href.includes('/dashboard')
+        ?
+        <BrowserRouter>
+          <Routes>
+            <Route path="dashboard/login" element={<Login />} />
+            <Route path="dashboard" element={<Dashboard />} />
+          </Routes>
+        </BrowserRouter>
+      :
+      null
+      }
     </div>
   );
 }
