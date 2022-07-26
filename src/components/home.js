@@ -184,7 +184,7 @@ const Home = () => {
                     </div>
                     <div className="col-md-6 col-12 p-0">
                         <div className='bannerImg'>
-                            <img src='/images/banner.png' alt='' className='img-fluid'/>
+                            <img src='/images/imondu_keyvisual-02.jpg' alt='' className='img-fluid'/>
                         </div>
                     </div>
                 </div>
@@ -277,7 +277,7 @@ const Home = () => {
                 <div className='row'>
                     <div className='col-md-6 col-12' data-aos="fade-right" data-aos-offset="300" data-aos-duration="1000">
                         <div className='visionImg'>
-                            <img src='/images/vision_bg.jpeg' alt='' />
+                            <img src='/images/imondu_keyvisual-01.png' alt='' />
                         </div>
                     </div>
                     <div className='col-md-6 col-12' data-aos="fade-left" data-aos-offset="300" data-aos-duration="1000">

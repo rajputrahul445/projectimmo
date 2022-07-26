@@ -72,6 +72,17 @@ section#start, .contact_page {
     list-style-type: none;
 }
 
+.listInline li {
+    transform: scale(1)!important;
+    transition: all 500ms ease;
+}
+
+.servicesList .listInline li:hover {
+    cursor: pointer;
+    background: linear-gradient(321.22deg,#89ac76 -144.13%,#b5e79a)!important;
+    box-shadow: 0 6px 12px #233444;    
+}
+
 .navigation a {
     color: #fff;
     font-size: 15px;
@@ -171,7 +182,7 @@ section#start, .contact_page {
     margin: 0;
 }
 .srvThumbnail{
-    background: url(../images/advantages_bg.png) right 0 no-repeat;
+    background: url(../images/imondu_keyvisual-03.png) right 0 no-repeat;
     background-size: 500px 100%;
 }
 .srvThumbnail img {
@@ -294,6 +305,9 @@ section.Bekannt h2 {
 }
 .Bekannt p {
     color: #fff;
+}
+.brand {
+    max-width: 161px;
 }
 .brandInr {
     padding-right: 180px;
@@ -508,14 +522,13 @@ input#term:checked + label:before {
     top: -15px;
     width: 40px;
     height: 40px;
-    background: #000000;
+    background: #E85700;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     color: #fff;
     font-size: 20px;
-    box-shadow: 0 0 10px #000;
     cursor: pointer;
 }
 .customRadio label {
@@ -535,9 +548,9 @@ input#term:checked + label:before {
 }
 
 .customRadio input:checked + label {
-    background: #000;
+    background: #36A0F6;
     color: #fff;
-    border-color: #000;
+    border-color: #36A0F6;
 }
 
 .customRadio label:before {
@@ -563,6 +576,26 @@ input#term:checked + label:before {
     padding: 50px 0;
     align-items: center;
     display: flex;
+}
+
+.btn-submit {
+    border-radius: 20px;
+    background-color: #50D37B;
+    color: #fff;
+}
+
+.btn-submit:hover {
+    color: #fff;
+}
+
+.btn-cancel {
+    border-radius: 20px;
+    color: #fff;
+    background-color: #E85700;
+}
+
+.btn-cancel:hover {
+    color: #fff;
 }
 
 .pageWrp {
