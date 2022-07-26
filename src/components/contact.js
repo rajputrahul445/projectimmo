@@ -60,7 +60,7 @@ const Contact = () => {
             </section>
             <div className='contact_detail'>
                 {
-                    contactDetail.map((item) => <div className='contact_detail_content'>
+                    contactDetail.map((item, i) => <div className='contact_detail_content' key={i}>
                         <img src={item.icon} alt='' />
                         <p className='contact_icon_text'>{item.text}</p>
                     </div>)
@@ -72,21 +72,21 @@ const Contact = () => {
                         <p className='contact_form_content_heading'>Sende eine Nachricht</p>
                         <div className='row'>
                             <div className='col-md-6 col-12'>
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="floatingInput" placeholder='Gib deinen Namen ein' value={name} onChange={(e)=>setName(e.target.value)}/>
-                                    <label for="floatingInput">Name</label>
+                                <div className="form-floating mb-3">
+                                    <input type="text" className="form-control" id="floatingInput" placeholder='Gib deinen Namen ein' value={name} onChange={(e)=>setName(e.target.value)}/>
+                                    <label htmlFor="floatingInput">Name</label>
                                 </div>
                             </div>
                             <div className='col-md-6 col-12'>
-                                <div class="form-floating mb-3">
-                                    <input type="email" class="form-control" id="floatingInput" placeholder='Geben Sie Ihr Email Adresse ein' value={email} onChange={(e)=>setEmail(e.target.value)} />
-                                    <label for="floatingInput">Email Adresse</label>
+                                <div className="form-floating mb-3">
+                                    <input type="email" className="form-control" id="floatingInput" placeholder='Geben Sie Ihr Email Adresse ein' value={email} onChange={(e)=>setEmail(e.target.value)} />
+                                    <label htmlFor="floatingInput">Email Adresse</label>
                                 </div>
                             </div>
                             <div className='col-md-12 col-12'>
-                                <div class="form-floating mb-4 mt-5">
-                                    <input type="text" class="form-control" id="floatingInput" placeholder='Gib deine Nachricht ein'value={note} onChange={(e)=>setNote(e.target.value)} />
-                                    <label for="floatingInput">Nachricht</label>
+                                <div className="form-floating mb-4 mt-5">
+                                    <input type="text" className="form-control" id="floatingInput" placeholder='Gib deine Nachricht ein'value={note} onChange={(e)=>setNote(e.target.value)} />
+                                    <label htmlFor="floatingInput">Nachricht</label>
                                 </div>
                             </div>
                         </div>

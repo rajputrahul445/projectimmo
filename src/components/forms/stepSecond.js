@@ -1,11 +1,12 @@
 import React from 'react'
 
-const StepSecond = ({popupHandle, stepCount, nextStep, backStep, handleInputChange, kommentar}) => {
+const StepSecond = ({popupHandle, stepCount, nextStep, backStep, handleInputChange, kommentar, fileChange}) => {
   return (
     <div className='form'>
         <div className='form-group'>
             <label>Grundrisse</label>
-            <input type='file' name='Grundrisse' accept='image/jpeg,image/gif,image/png,image/jpg,application/pdf' className='form-control' multiple/>
+            <input type='file' name='Grundrisse' accept='image/jpeg,image/gif,image/png,image/jpg,application/pdf' className='form-control' multiple onChange={(e)=>fileChange}/>
+            
         </div>
         <div className='form-group'>
             <label>Fotos</label>

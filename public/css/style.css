@@ -549,3 +549,15 @@ input#term:checked + label:before {
 .customRadio input:checked + label:before {
     background: #fff;
 }
+.middleFormWrp {
+    width: 500px;
+    margin: 0px auto;
+    padding: 50px 40px;
+    box-shadow: 0 0 10px #00000054;
+}
+.middleForm {
+    min-height: calc(100vh - 130px);
+    padding: 50px 0;
+    align-items: center;
+    display: flex;
+}

@@ -32,6 +32,8 @@ const Home = () => {
     const [email, setEmail] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
     const [enquiryType, setEnquiryType] = useState('');
+
+    const [files, setFiles] = useState(null);
     
     const popupHandle = (e) => {
         setPopup(!popup);
@@ -159,9 +161,16 @@ const Home = () => {
         });
         //console.log(postData)
     }
+    const fileChange = (e)=> {
+        let file = files;
+        file[e.target.name] = e.target.files[0]
+      
+        setFiles(files);
+      }
   return (
     <React.Fragment>
-        {popup ? <Form popupHandle={popupHandle} floor={floor} units={units} gewerbe={gewerbe} grundstück={grundstück} stepCount={stepCount} nextStep={nextStep} backStep={backStep} formSubmit={formSubmit} handleInputChange={handleInputChange} unitsValue={unitsValue} constructionYear={constructionYear} surface={surface} room={room} floorValue={floorValue} kommentar={kommentar} federalState={federalState} postalCode={postalCode} streetHouseNumber={streetHouseNumber} desiredPrice={desiredPrice} email={email} phoneNumber={phoneNumber} divisionDeclaration={divisionDeclaration} developmentPossible={developmentPossible}/>: null }
+        {popup ? <Form popupHandle={popupHandle} floor={floor} units={units} gewerbe={gewerbe} grundstück={grundstück} stepCount={stepCount} nextStep={nextStep} backStep={backStep} formSubmit={formSubmit} handleInputChange={handleInputChange} unitsValue={unitsValue} constructionYear={constructionYear} surface={surface} room={room} floorValue={floorValue} kommentar={kommentar} federalState={federalState} postalCode={postalCode} streetHouseNumber={streetHouseNumber} desiredPrice={desiredPrice} email={email} phoneNumber={phoneNumber} divisionDeclaration={divisionDeclaration} developmentPossible={developmentPossible} fileChange={fileChange}/>: null }
+        {console.log(files)}
 
         <section className='banner' id='start'>
             <div className='container-fluid'>

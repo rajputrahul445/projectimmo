@@ -4,7 +4,7 @@ import StepFour from './stepFour';
 import StepSecond from './stepSecond';
 import StepThree from './stepThree';
 
-const Form = ({popupHandle, floor, units, gewerbe, grundstück, stepCount, nextStep, backStep, formSubmit, handleInputChange, unitsValue, constructionYear, surface, room, floorValue, kommentar, federalState, postalCode, streetHouseNumber, desiredPrice, email, phoneNumber}) => {
+const Form = ({popupHandle, floor, units, gewerbe, grundstück, stepCount, nextStep, backStep, formSubmit, handleInputChange, unitsValue, constructionYear, surface, room, floorValue, kommentar, federalState, postalCode, streetHouseNumber, desiredPrice, email, phoneNumber, fileChange}) => {
   return (
     <>
     <div className='popup'>
@@ -21,7 +21,7 @@ const Form = ({popupHandle, floor, units, gewerbe, grundstück, stepCount, nextS
             {
                 stepCount === 2
                 ?
-                <StepSecond popupHandle={popupHandle}  stepCount={stepCount} nextStep={nextStep} backStep={backStep} handleInputChange={handleInputChange} kommentar={kommentar} />
+                <StepSecond popupHandle={popupHandle}  stepCount={stepCount} nextStep={nextStep} backStep={backStep} handleInputChange={handleInputChange} kommentar={kommentar} fileChange={fileChange}/>
                 :
                 null
             }
