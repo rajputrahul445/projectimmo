@@ -7,7 +7,7 @@ function Sidebar() {
 			<div className="sticky-top">
 				<div className="sidebarBrand text-center">
 					<Link to="/dashboard" className="">
-						<img src="images/logo.png" alt="" className="" />
+						<img src={process.env.PUBLIC_URL + '/images/logo.png'} alt="" className="" />
 					</Link>
 				</div>
 				<div className="sidebarList">
