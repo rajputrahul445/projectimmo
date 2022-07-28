@@ -7,7 +7,7 @@ import Header from './header';
 import Footer from './footer';
 
 const Contact = () => {
-
+    const [success, setSuccess] = useState(false);
     const contactDetail = [
         {
             text: "Bavariafilmpl. 7, 82031 Grünwald",
@@ -26,12 +26,6 @@ const Contact = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [note, setNote] = useState("");
-
-    // const handleInputChange = (e) => {
-    //     setName(e.target.value);
-    //     setEmail(e.target.value);
-    //     setNote(e.target.value);
-    // }
     const submit = (e) => {
         const postData = {
             "name" : name,
@@ -45,6 +39,13 @@ const Contact = () => {
         axios.post(baseURL, postData, headers )
         .then((response) => {
             console.log(response.data);
+            setName('');
+            setEmail('');
+            setNote('');
+            setSuccess(true);
+            setTimeout(()=>{
+                setSuccess(false);
+            }, 2000)
         });
         
     };
@@ -71,8 +72,17 @@ const Contact = () => {
                 }
             </div>
             <div className='container'>
-                <div className='contact_form_content justify-content-between'>
+                <div className='contact_form_content justify-content-between align-items-start'>
+                    
                     <div>
+                    {success 
+                        ?
+                        <div class="alert alert-success fullWidth text-center">
+                            successfully Sent!
+                        </div>
+                        :
+                        null
+                    }
                         <p className='contact_form_content_heading'>Sende eine Nachricht</p>
                         <div className='row'>
                             <div className='col-md-6 col-12'>
