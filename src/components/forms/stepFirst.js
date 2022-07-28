@@ -5,15 +5,17 @@ const StepFirst = ({popupHandle, floor, units, gewerbe, grundstück, stepCount, 
     <div className='form'>
         <h1>Beschreiben Sie Ihre Immobilie</h1>
         { units || gewerbe ||( grundstück === false)?
-            <div className='form-group'>
-                <input type='number' placeholder='Einheiten' name='unitsValue' className='form-control' onChange={(e) => handleInputChange(e)} value={unitsValue} />
+            <div className='form-floating'>
+                <input type='number' id='unitsValue' name='unitsValue' placeholder='Einheiten' className='form-control' onChange={(e) => handleInputChange(e)} value={unitsValue} />
+                <label for='unitsValue'>Einheiten</label>
             </div>
             :
             null
         }
         {grundstück ?
-            <div className='form-group'>
-                <input type='number' placeholder='Fläche' name='surface' className='form-control' onChange= {(e)=> handleInputChange(e)} value={surface}/>
+            <div className='form-floating'>
+                <input type='number' id='surface' placeholder='Fläche' name='surface' className='form-control' onChange= {(e)=> handleInputChange(e)} value={surface}/>
+                <label for='surface'>Fläche</label>
             </div>
             :
             null
@@ -21,26 +23,29 @@ const StepFirst = ({popupHandle, floor, units, gewerbe, grundstück, stepCount, 
         {grundstück ? 
             null
             :
-            <div className='form-group'>
-                <input type='number' placeholder='Baujahr' name='constructionYear' className='form-control' onChange= {(e)=> handleInputChange(e)} value={constructionYear}/>
+            <div className='form-floating'>
+                <input id='constructionYear' type='number' placeholder='Baujahr' name='constructionYear' className='form-control' onChange= {(e)=> handleInputChange(e)} value={constructionYear}/>
+                <label for='constructionYear'>Baujahr</label>
             </div>
         }
         {floor || units || gewerbe ?
-            <div className='form-group'>
-                <input type='number' placeholder='Stockwerke' name='floorValue' className='form-control' onChange= {(e)=> handleInputChange(e)} value={floorValue} />
+            <div className='form-floating'>
+                <input id='floorValue' type='number' placeholder='Stockwerke' name='floorValue' className='form-control' onChange= {(e)=> handleInputChange(e)} value={floorValue} />
+                <label for='floorValue'>Stockwerke</label>
             </div>
             :
             null
         }
         { units || gewerbe || grundstück
             ? null
-            : <div className='form-group'>
-                <input type='number' placeholder='Zimmer' name='room' className='form-control' onChange={(e)=> handleInputChange(e)} value={room} />
+            : <div className='form-floating'>
+                <input id='room' type='number' placeholder='Zimmer' name='room' className='form-control' onChange={(e)=> handleInputChange(e)} value={room} />
+                <label for='room'>Zimmer</label>
             </div>
             }
         { units ?
             <React.Fragment>
-                <h3>Teilungserklärung</h3>
+                <div className='steps-radio-title'>Teilungserklärung</div>
                 <ul className='listInline gap-20 mb-3'>
                     <li>
                         <div className='customRadio'>
@@ -59,7 +64,7 @@ const StepFirst = ({popupHandle, floor, units, gewerbe, grundstück, stepCount, 
             :
             null
         }
-        <h3>Erbpacht</h3>
+        <div className='steps-radio-title'>Erbpacht</div>
         <ul className='listInline gap-20 mb-3'>
             <li>
                 <div className='customRadio'>
@@ -76,7 +81,7 @@ const StepFirst = ({popupHandle, floor, units, gewerbe, grundstück, stepCount, 
         </ul>
         { grundstück ?
             <React.Fragment>
-                <h3>Bebauung möglich?</h3>
+                <div className='steps-radio-title'>Bebauung möglich?</div>
                 <ul className='listInline gap-20 mb-3'>
                     <li>
                         <div className='customRadio'>
