@@ -745,3 +745,13 @@ input#term:checked + label:before {
     flex-basis: 100%;
     max-width: 100%;
 }
+.loginBrand {
+    background: #393939;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.loginBrand img {
+    max-height: 30px;
+}

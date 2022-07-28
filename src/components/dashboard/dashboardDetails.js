@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import Message from './message';
 import axios from "axios";
 import API_HOST from '../API_ENDPOINTS/API_HOST';
 import API_ENDPOINTS from '../API_ENDPOINTS/API_ENDPOINTS';
@@ -7,11 +6,11 @@ import Sidebar from './sidebar';
 import DashboardHeader from './dashboardHeader';
 
 const DashboardDetails = () => {
-    const [apartmentEnquiryCount, setApartmentEnquiryCount] = useState('');
-    const [houseEnquiryCount, setHouseEnquiryCount] = useState('');
-    const [apartmentBuildingEnquiryCount, setApartmentBuildingEnquiryCount] = useState('');
-    const [businessEnquiryCount, setBusinessEnquiryCount] = useState('');
-    const [propertyEnquiryCount, setPropertyEnquiryCount] = useState('');
+    const [apartmentEnquiryCount, setApartmentEnquiryCount] = useState('0');
+    const [houseEnquiryCount, setHouseEnquiryCount] = useState('0');
+    const [apartmentBuildingEnquiryCount, setApartmentBuildingEnquiryCount] = useState('0');
+    const [businessEnquiryCount, setBusinessEnquiryCount] = useState('0');
+    const [propertyEnquiryCount, setPropertyEnquiryCount] = useState('0');
     useEffect(()=>{
         getDashboardDetailsData();
     }, [])
@@ -78,9 +77,9 @@ const DashboardDetails = () => {
                         </div>
                     </div>
                 </div>
-                <div className='col-12'>
+                {/* <div className='col-12'>
                     <Message />
-                </div>
+                </div> */}
             </div>
         </div>
     </div>

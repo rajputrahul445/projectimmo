@@ -20,13 +20,13 @@ function Sidebar() {
 						</li>
                        
 						<li>
-							<a href="/"><span>Enquiries</span></a>
+							<a href="/" className='border-bottom' onClick={(e)=>e.preventDefault()}><span>Enquiries</span></a>
                             <ul className='unorderList'>
-                                <li><Link to="/enquiries/Wohnung"><i className="far fa-building"></i><span>Wohnung</span></Link></li>
-                                <li><Link to="/enquiries/Wohnung"><i className="fas fa-home"></i><span>Haus</span></Link></li>
-                                <li><Link to="/enquiries/Wohnung"><i className="fas fa-city"></i><span>Mehrfamilienhaus</span></Link></li>
-                                <li><Link to="/enquiries/Wohnung"><i className="fas fa-briefcase"></i><span>Gewerbe</span></Link></li>
-                                <li><Link to="/enquiries/Wohnung"><i className="fas fa-coins"></i><span>Grundstück</span></Link></li>
+                                <li><Link to="/enquiries/apartment"><i className="far fa-building"></i><span>Wohnung</span></Link></li>
+                                <li><Link to="/enquiries/house"><i className="fas fa-home"></i><span>Haus</span></Link></li>
+                                <li><Link to="/enquiries/apartment_building"><i className="fas fa-city"></i><span>Mehrfamilienhaus</span></Link></li>
+                                <li><Link to="/enquiries/business"><i className="fas fa-briefcase"></i><span>Gewerbe</span></Link></li>
+                                <li><Link to="/enquiries/property"><i className="fas fa-coins"></i><span>Grundstück</span></Link></li>
                             </ul>
 						</li>
 						{/* <li>

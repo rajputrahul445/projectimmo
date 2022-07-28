@@ -47,6 +47,9 @@ const Login = () =>{
   return (
     <div className='middleForm'>
         <div className="middleFormWrp">
+            <div className='loginBrand'>
+                <img src='/images/logo.png' alt='' />
+            </div>
             <h1 className="heading text-center mb-4">Sign in</h1>
             <div className="form-group">
                 <input type="email" className="form-control" placeholder='Email' value={email} onChange={(e)=>setEmail(e.target.value)}/>

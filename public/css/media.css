@@ -1,6 +1,6 @@
 @media only screen and (max-width: 991px) {
     body {
-        padding-top: 65px;
+        padding-top: 60px;
     }
     .mobile{
         display: block;
@@ -152,5 +152,8 @@
     }
     .servicesInr h2 {
         margin-bottom: 20px;
+    }
+    section#start, .contact_page{
+        padding-top: 0;
     }
 }

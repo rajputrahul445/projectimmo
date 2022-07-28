@@ -2,9 +2,12 @@ import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import API_HOST from '../API_ENDPOINTS/API_HOST';
 import API_ENDPOINTS from '../API_ENDPOINTS/API_ENDPOINTS';
+import Sidebar from './sidebar';
+import DashboardHeader from './dashboardHeader';
 
 const Message = () => {
     const [message, setMessage] = useState([]);
+    //const [messageId, setMessageId] = useState('');
     useEffect(()=>{
         getMessageData();
     }, [])
@@ -20,8 +23,35 @@ const Message = () => {
             })
            
     };
+    const deleteMesage = async (id) => {
+        let baseURL = API_HOST.baseUrl + API_ENDPOINTS.deleteEnquiry;
+        const headers = { 
+            'Authorization': localStorage.getItem('token'),
+        };
+        const postData = {
+            "id" : id,
+            "mode" : "message"
+        }
+        await axios.post(baseURL, postData, headers)
+        .then(response => 
+            {
+                console.log('Delete successful', response);
+                setTimeout(()=>{
+                    getMessageData();
+                }, 1000)
+            }
+            )
+        .catch(error => {
+            //setErrorMessage(error.message);
+            console.log('There was an error!', error);
+        });
+        
+    }
   return (
-    <div className='rightArea'>
+    <div className='pageWrp'>
+        <Sidebar />
+        <div className='rightArea'>
+        <DashboardHeader />
         <div className='tableWrp'>
             <table className="table">
                 <thead>
@@ -38,13 +68,14 @@ const Message = () => {
                                 <td>{data.messageName}</td>
                                 <td>{data.messageEmail}</td>
                                 <td>{data.messageFare}</td>
-                                <td><button className='btn btn-danger p-2'><i className="fas fa-trash-alt"></i></button></td>
+                                <td><button className='btn btn-danger p-2' name={data.messageId} onClick={()=>{deleteMesage(data.messageId)}}><i className="fas fa-trash-alt"></i></button></td>
                             </tr>
                         ))}
                     
                 </tbody>
             </table>
         </div>
+    </div>
     </div>
   )
 }

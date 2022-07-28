@@ -38,7 +38,7 @@ const Contact = () => {
             "email" : email,
             "fare" : note
         }
-        let baseURL = API_HOST.baseUrl + API_ENDPOINTS.addEnquiry;
+        let baseURL = API_HOST.baseUrl + API_ENDPOINTS.addMessage;
         const headers = {
             'Content-Type': 'text/plain'
         };

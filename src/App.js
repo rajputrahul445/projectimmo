@@ -8,6 +8,7 @@ import DashboardDetails from './components/dashboard/dashboardDetails';
 import Message from './components/dashboard/message';
 import ProtectedRoute from './ProtectedRoute';
 import PublicRoute from './PublicRoute';
+import Enquiries from './components/dashboard/enquries';
 
 
 
@@ -18,6 +19,7 @@ const App = () => {
 				<Route path="/*" element={<ProtectedRoute />} >
           <Route path="dashboard" element={<DashboardDetails />} />
           <Route path="message" element={<Message />} />
+          <Route path="enquiries/:enquiry" element={<Enquiries />} />
 				</Route>
 				<Route path="/" element={<PublicRoute />} >
             <Route path="/" element={<Home />} />

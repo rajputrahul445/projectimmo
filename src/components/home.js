@@ -164,10 +164,10 @@ const Home = () => {
         //console.log(postData)
     }
     const fileChange = (e)=> {
-        let file = files;
-        file[e.target.name] = e.target.files[0]
+        //let file = files;
+        setFiles([e.target.name] = e.target.files[0])
       
-        setFiles(files);
+        //setFiles(files);
       }
   return (
     <React.Fragment>

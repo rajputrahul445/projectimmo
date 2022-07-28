@@ -9,7 +9,7 @@ const DashboardHeader = () => {
         localStorage.clear('token')
         localStorage.clear('userId')
         localStorage.clear('userName')
-        navigate("login");
+        navigate("/login");
     }
   return (
     
