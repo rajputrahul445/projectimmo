@@ -16,21 +16,7 @@ const Dashboard = () => {
     <div className="pageWrp">
         <Sidebar logout={logout}/>
         <div className='rightArea'>
-            <div className="topHeader mb-4">
-				<ul className="listInline">
-					<li className="dropdown">
-						<a href="/" className="dropdown-toggle" onClick={(e)=> e.preventDefault()}>
-							<div className="d-block">
-								<span className="desktop">{localStorage.getItem('userName')}</span>
-							</div>
-						</a>
-						<div className="dropdown-menu">
-						    <a className="dropdown-item" href="/" onClick={logout}>Logout</a>
-						</div>
-					</li>
-				</ul>
-			</div>
-            <DashboardDetails />
+            
         </div>
     </div>
   )

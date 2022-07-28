@@ -3,6 +3,8 @@ import "./common.css";
 import axios from "axios";
 import API_HOST from './API_ENDPOINTS/API_HOST';
 import API_ENDPOINTS from './API_ENDPOINTS/API_ENDPOINTS';
+import Header from './header';
+import Footer from './footer';
 
 const Contact = () => {
 
@@ -49,6 +51,8 @@ const Contact = () => {
 
 
     return (
+        <React.Fragment>
+            <Header />
         <div className='contact_page'>
             <section className='contactBanner'>
                 <div className='container'>
@@ -120,6 +124,8 @@ const Contact = () => {
                 </div>
             </div>
         </div>
+        <Footer />
+        </React.Fragment>
     )
 }
 

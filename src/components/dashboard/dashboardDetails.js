@@ -1,75 +1,90 @@
-import React, { useEffect } from 'react';
+import React, {useEffect, useState} from 'react';
 import Message from './message';
 import axios from "axios";
 import API_HOST from '../API_ENDPOINTS/API_HOST';
 import API_ENDPOINTS from '../API_ENDPOINTS/API_ENDPOINTS';
+import Sidebar from './sidebar';
+import DashboardHeader from './dashboardHeader';
 
 const DashboardDetails = () => {
+    const [apartmentEnquiryCount, setApartmentEnquiryCount] = useState('');
+    const [houseEnquiryCount, setHouseEnquiryCount] = useState('');
+    const [apartmentBuildingEnquiryCount, setApartmentBuildingEnquiryCount] = useState('');
+    const [businessEnquiryCount, setBusinessEnquiryCount] = useState('');
+    const [propertyEnquiryCount, setPropertyEnquiryCount] = useState('');
     useEffect(()=>{
-
+        getDashboardDetailsData();
     }, [])
-    const getMessage = () => {
-        axios.get('/user?ID=12345')
-            .then(function (response) {
-                // handle success
+    const getDashboardDetailsData = async () => {
+        let baseURL = API_HOST.baseUrl + API_ENDPOINTS.getDashboardDetails;
+        await axios.get(baseURL)
+            .then((response) => {
                 console.log(response);
+                setApartmentEnquiryCount(response.data.apartment_EnquiryCount)
+                setHouseEnquiryCount(response.data.house_EnquiryCount)
+                setApartmentBuildingEnquiryCount(response.data.apartment_Building_EnquiryCount)
+                setBusinessEnquiryCount(response.data.business_EnquiryCount)
+                setPropertyEnquiryCount(response.data.property_EnquiryCount)
             })
-            .catch(function (error) {
-                // handle error
+            .catch((error) => {
                 console.log(error);
             })
-            .then(function () {
-                // always executed
-            });
+           
     };
+    
   return (
-    <div className='d-block p-3'>
-        <div className='row'>
-            <div className='col-md-3 col-12 mb-3'>
-                <div className="card">
-                    <div className="card-body">
-                        <h3>0</h3>
-                        <h5 className="card-title">Wohnung</h5>
+    <div className='pageWrp'>
+        <Sidebar />
+        <div className='rightArea'>
+        <DashboardHeader />
+            <div className='row'>
+                <div className='col-md-4 col-12 mb-3'>
+                    <div className="card text-center">
+                        <div className="p-4 card-body">
+                            <h3>{apartmentEnquiryCount}</h3>
+                            <h5 className="card-title">Wohnung</h5>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className='col-md-3 col-12 mb-3'>
-                <div className="card">
-                    <div className="card-body">
-                        <h3>0</h3>
-                        <h5 className="card-title">Haus</h5>
+                <div className='col-md-4 col-12 mb-3'>
+                    <div className="card text-center">
+                        <div className="p-4 card-body">
+                            <h3>{houseEnquiryCount}</h3>
+                            <h5 className="card-title">Haus</h5>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className='col-md-3 col-12 mb-3'>
-                <div className="card">
-                    <div className="card-body">
-                        <h3>0</h3>
-                        <h5 className="card-title">Mehrfamilienhaus</h5>
+                <div className='col-md-4 col-12 mb-3'>
+                    <div className="card text-center">
+                        <div className="p-4 card-body">
+                            <h3>{apartmentBuildingEnquiryCount}</h3>
+                            <h5 className="card-title">Mehrfamilienhaus</h5>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className='col-md-3 col-12 mb-3'>
-                <div className="card">
-                    <div className="card-body">
-                        <h3>0</h3>
-                        <h5 className="card-title">Gewerbe</h5>
+                <div className='col-md-4 col-12 mb-3'>
+                    <div className="card text-center">
+                        <div className="p-4 card-body">
+                            <h3>{businessEnquiryCount}</h3>
+                            <h5 className="card-title">Gewerbe</h5>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className='col-md-3 col-12 mb-3'>
-                <div className="card">
-                    <div className="card-body">
-                        <h3>0</h3>
-                        <h5 className="card-title">Grundstück</h5>
+                <div className='col-md-4 col-12 mb-3'>
+                    <div className="card text-center">
+                        <div className="p-4 card-body">
+                            <h3>{propertyEnquiryCount}</h3>
+                            <h5 className="card-title">Grundstück</h5>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className='col-12'>
-                <Message />
+                <div className='col-12'>
+                    <Message />
+                </div>
             </div>
         </div>
     </div>
+
   )
 }
 

@@ -5,6 +5,8 @@ import axios from "axios";
 import Form from './forms/form';
 import API_HOST from './API_ENDPOINTS/API_HOST';
 import API_ENDPOINTS from './API_ENDPOINTS/API_ENDPOINTS';
+import Header from './header';
+import Footer from './footer';
 AOS.init({once: true});
 
 const Home = () => {
@@ -169,6 +171,7 @@ const Home = () => {
       }
   return (
     <React.Fragment>
+        <Header />
         {popup ? <Form popupHandle={popupHandle} floor={floor} units={units} gewerbe={gewerbe} grundstück={grundstück} stepCount={stepCount} nextStep={nextStep} backStep={backStep} formSubmit={formSubmit} handleInputChange={handleInputChange} unitsValue={unitsValue} constructionYear={constructionYear} surface={surface} room={room} floorValue={floorValue} kommentar={kommentar} federalState={federalState} postalCode={postalCode} streetHouseNumber={streetHouseNumber} desiredPrice={desiredPrice} email={email} phoneNumber={phoneNumber} divisionDeclaration={divisionDeclaration} developmentPossible={developmentPossible} fileChange={fileChange}/>: null }
         {console.log(files)}
 
@@ -422,7 +425,7 @@ const Home = () => {
                 <img src='/images/gl2.png' alt='' />
             </div>
         </section> */}
-        
+        <Footer />
     </React.Fragment>
   )
 }
