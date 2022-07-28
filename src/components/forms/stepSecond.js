@@ -4,21 +4,21 @@ const StepSecond = ({popupHandle, stepCount, nextStep, backStep, handleInputChan
   return (
     <div className='form'>
         <div className='form-group'>
-            <label>Grundrisse</label>
+            <label className='steps-radio-title'>Grundrisse</label>
             <input type='file' name='Grundrisse' accept='image/jpeg,image/gif,image/png,image/jpg,application/pdf' className='form-control' multiple onChange={(e)=>fileChange}/>
             
         </div>
         <div className='form-group'>
-            <label>Fotos</label>
+            <label className='steps-radio-title'>Fotos</label>
             <input type='file' name='Fotos' accept="image/jpeg,image/gif,image/png,image/jpg" className='form-control' multiple/>
         </div>
         <div className='form-group'>
-            <label>Anhänge</label>
+            <label className='steps-radio-title'>Anhänge</label>
             <input type='file' name='Anhänge' className='form-control' multiple/>
         </div>
         <div className='form-group'>
-            <label>Kommentar</label>
-            <textarea placeholder="kommentar" cols="30" rows="6" className="form-control" name='kommentar' value={kommentar} onChange={(e)=> handleInputChange(e)}></textarea>
+            <label for='kommentar' className='steps-radio-title'>Kommentar</label>
+            <textarea id='kommentar' cols="30" rows="6" className="form-control comment" name='kommentar' value={kommentar} onChange={(e)=> handleInputChange(e)}></textarea>
         </div>
         <ul className='listInline gap-10 justify-content-between'>
             {stepCount === 0

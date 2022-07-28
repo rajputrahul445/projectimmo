@@ -91,12 +91,12 @@ section#start, .contact_page {
 .greenBtn {
     padding: 10px 40px;
     display: inline-flex;
-    background: #89ac76;
+    background: #50D37B;
     border-radius: 12px;
     color: #fff;
 }
 .greenBtn:hover{
-    color:#fff;
+    color: #005608;
 }
 .bannerText{
     height: 100%;
@@ -426,8 +426,8 @@ footer a {
 }
 
 .form-floating>label {
-    padding: 10px 0 0;
-    font-size: 22px;
+    padding: 12px 0 0;
+    font-size: 18px;
     color: #0000009c;
 }
 
@@ -682,6 +682,22 @@ input#term:checked + label:before {
 .sidebarList li .border {
     border: 1px solid #40414A !important;
     border-bottom: none !important;
+}
+.steps-radio-title {
+    padding: 12px 0 0;
+    font-size: 18px;
+    color: #0000009c;
+}
+
+.comment {
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+
+.comment:focus {
+    border-color: unset;
+    outline: 0;
+    box-shadow: unset;
 }
 .error {
     color: #c50505;
