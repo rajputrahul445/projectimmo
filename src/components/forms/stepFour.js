@@ -5,15 +5,15 @@ const StepFour = ({popupHandle, stepCount, formSubmit, backStep, handleInputChan
     <div className='form'>
         <div className='form-floating'>
             <input id='desiredPrice' type='text' name='desiredPrice' placeholder='Was ist ihr Wunschpreis?' className='form-control' onChange={(e)=> handleInputChange(e)} value={desiredPrice}/>
-            <label for='desiredPrice'>Bundesland</label>
+            <label htmlFor='desiredPrice'>Bundesland</label>
         </div>
         <div className='form-floating'>
             <input id='email' type='text' name='email' placeholder='Email' className='form-control' onChange={(e)=> handleInputChange(e)} value={email} />
-            <label for='email'>Email</label>
+            <label htmlFor='email'>Email</label>
         </div>
         <div className='form-floating'>
             <input id='phoneNumber' type='text' name='phoneNumber' placeholder='Telefonnummer' className='form-control' onChange={(e)=> handleInputChange(e)} value={phoneNumber}/>
-            <label for='phoneNumber'>Telefonnummer</label>
+            <label htmlFor='phoneNumber'>Telefonnummer</label>
         </div>
         <ul className='mt-3 listInline gap-10 justify-content-between'>
             {stepCount === 0

@@ -40,7 +40,7 @@ const Message = () => {
                     getMessageData();
                 }, 1000)
             }
-            )
+        )
         .catch(error => {
             //setErrorMessage(error.message);
             console.log('There was an error!', error);

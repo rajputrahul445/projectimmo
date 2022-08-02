@@ -4,13 +4,22 @@ import StepFour from './stepFour';
 import StepSecond from './stepSecond';
 import StepThree from './stepThree';
 
-const Form = ({popupHandle, floor, units, gewerbe, grundstück, stepCount, nextStep, backStep, formSubmit, handleInputChange, unitsValue, constructionYear, surface, room, floorValue, kommentar, federalState, postalCode, streetHouseNumber, desiredPrice, email, phoneNumber, fileChange}) => {
+const Form = ({popupHandle, floor, units, gewerbe, grundstück, stepCount, nextStep, backStep, formSubmit, handleInputChange, unitsValue, constructionYear, surface, room, floorValue, kommentar, federalState, postalCode, streetHouseNumber, desiredPrice, email, phoneNumber, fileChange, photosFilesChange, attachmentFilesChange, formSuccess, formSuccessMsg}) => {
   return (
     <>
     <div className='popup'>
         <div className='popupInr'>
             <div className='closeBtn' onClick={popupHandle}><i className="fas fa-times"></i></div>
-            
+
+            {
+                formSuccess
+                ?
+                <div class="alert alert-success" role="alert">
+                    {formSuccessMsg}
+                </div>
+                :
+                null
+            }
             {
                 stepCount === 1
                 ?
@@ -21,7 +30,7 @@ const Form = ({popupHandle, floor, units, gewerbe, grundstück, stepCount, nextS
             {
                 stepCount === 2
                 ?
-                <StepSecond popupHandle={popupHandle}  stepCount={stepCount} nextStep={nextStep} backStep={backStep} handleInputChange={handleInputChange} kommentar={kommentar} fileChange={fileChange}/>
+                <StepSecond popupHandle={popupHandle}  stepCount={stepCount} nextStep={nextStep} backStep={backStep} handleInputChange={handleInputChange} kommentar={kommentar} fileChange={fileChange} photosFilesChange={photosFilesChange} attachmentFilesChange={attachmentFilesChange}/>
                 :
                 null
             }

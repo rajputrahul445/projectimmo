@@ -7,7 +7,7 @@ const StepFirst = ({popupHandle, floor, units, gewerbe, grundstück, stepCount, 
         { units || gewerbe ||( grundstück === false)?
             <div className='form-floating'>
                 <input type='number' id='unitsValue' name='unitsValue' placeholder='Einheiten' className='form-control' onChange={(e) => handleInputChange(e)} value={unitsValue} />
-                <label for='unitsValue'>Einheiten</label>
+                <label htmlFor='unitsValue'>Einheiten</label>
             </div>
             :
             null
@@ -15,7 +15,7 @@ const StepFirst = ({popupHandle, floor, units, gewerbe, grundstück, stepCount, 
         {grundstück ?
             <div className='form-floating'>
                 <input type='number' id='surface' placeholder='Fläche' name='surface' className='form-control' onChange= {(e)=> handleInputChange(e)} value={surface}/>
-                <label for='surface'>Fläche</label>
+                <label htmlFor='surface'>Fläche</label>
             </div>
             :
             null
@@ -25,13 +25,13 @@ const StepFirst = ({popupHandle, floor, units, gewerbe, grundstück, stepCount, 
             :
             <div className='form-floating'>
                 <input id='constructionYear' type='number' placeholder='Baujahr' name='constructionYear' className='form-control' onChange= {(e)=> handleInputChange(e)} value={constructionYear}/>
-                <label for='constructionYear'>Baujahr</label>
+                <label htmlFor='constructionYear'>Baujahr</label>
             </div>
         }
         {floor || units || gewerbe ?
             <div className='form-floating'>
                 <input id='floorValue' type='number' placeholder='Stockwerke' name='floorValue' className='form-control' onChange= {(e)=> handleInputChange(e)} value={floorValue} />
-                <label for='floorValue'>Stockwerke</label>
+                <label htmlFor='floorValue'>Stockwerke</label>
             </div>
             :
             null
@@ -40,7 +40,7 @@ const StepFirst = ({popupHandle, floor, units, gewerbe, grundstück, stepCount, 
             ? null
             : <div className='form-floating'>
                 <input id='room' type='number' placeholder='Zimmer' name='room' className='form-control' onChange={(e)=> handleInputChange(e)} value={room} />
-                <label for='room'>Zimmer</label>
+                <label htmlFor='room'>Zimmer</label>
             </div>
             }
         { units ?

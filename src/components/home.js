@@ -35,7 +35,11 @@ const Home = () => {
     const [phoneNumber, setPhoneNumber] = useState('');
     const [enquiryType, setEnquiryType] = useState('');
 
-    const [files, setFiles] = useState(null);
+    const [floorPlanFiles, setFloorPlanFiles] = useState([]);
+    const [photosFiles, setPhotosFiles] = useState([]);
+    const [attachmentFiles, setAttachmentFiles] = useState([]);
+    const [formSuccess, setFormSuccess] = useState(false);
+    const [formSuccessMsg, setFormSuccessMsg] = useState('');
     
     const popupHandle = (e) => {
         setPopup(!popup);
@@ -59,6 +63,11 @@ const Home = () => {
         setDesiredPrice('');
         setEmail('');
         setPhoneNumber('');
+        setFloorPlanFiles([]);
+        setPhotosFiles([]);
+        setAttachmentFiles([]);
+        setFormSuccess(false);
+        setFormSuccessMsg('')
     }
     const houseHandle = () => {
         setfloor(true);
@@ -148,11 +157,12 @@ const Home = () => {
             "desiredPrice" : desiredPrice,
             "email" : email,
             "phoneNumber" : phoneNumber,
-            "floorPlanFiles" : "[{\"file\" : \"image_1\"},{\"file\" : \"image_2\"},{\"file\" : \"image_3\"}]",
-            "photosFiles" : "[{\"file\" : \"image_1\"},{\"file\" : \"image_2\"},{\"file\" : \"image_3\"}]",
-            "attachmentFiles" : "[{\"file\" : \"image_1\"},{\"file\" : \"image_2\"},{\"file\" : \"image_3\"}]"
+            "floorPlanFiles" : floorPlanFiles,
+            "photosFiles" : photosFiles,
+            "attachmentFiles" : attachmentFiles
             
         }
+        
         let baseURL = API_HOST.baseUrl + API_ENDPOINTS.addEnquiry;
         const headers = {
             'Content-Type': 'text/plain'
@@ -160,20 +170,28 @@ const Home = () => {
         axios.post(baseURL, postData, headers )
         .then((response) => {
             console.log(response.data);
-        });
-        //console.log(postData)
+            setFormSuccess(true);
+            setFormSuccessMsg('Saved!')
+            setTimeout(()=>{
+                popupHandle()
+            }, 1500)
+        }).catch((error)=>(
+            console.log(error)
+        ));
     }
-    const fileChange = (e)=> {
-        //let file = files;
-        setFiles([e.target.name] = e.target.files[0])
-      
-        //setFiles(files);
-      }
+    const fileChange = (floorPlanFiles)=> {
+        setFloorPlanFiles(floorPlanFiles);
+    }
+    const photosFilesChange = (photosFiles)=> {
+        setPhotosFiles(photosFiles);
+    }
+    const attachmentFilesChange = (attachmentFiles)=> {
+        setAttachmentFiles(attachmentFiles);
+    }
   return (
     <React.Fragment>
         <Header />
-        {popup ? <Form popupHandle={popupHandle} floor={floor} units={units} gewerbe={gewerbe} grundstück={grundstück} stepCount={stepCount} nextStep={nextStep} backStep={backStep} formSubmit={formSubmit} handleInputChange={handleInputChange} unitsValue={unitsValue} constructionYear={constructionYear} surface={surface} room={room} floorValue={floorValue} kommentar={kommentar} federalState={federalState} postalCode={postalCode} streetHouseNumber={streetHouseNumber} desiredPrice={desiredPrice} email={email} phoneNumber={phoneNumber} divisionDeclaration={divisionDeclaration} developmentPossible={developmentPossible} fileChange={fileChange}/>: null }
-        {console.log(files)}
+        {popup ? <Form popupHandle={popupHandle} floor={floor} units={units} gewerbe={gewerbe} grundstück={grundstück} stepCount={stepCount} nextStep={nextStep} backStep={backStep} formSubmit={formSubmit} handleInputChange={handleInputChange} unitsValue={unitsValue} constructionYear={constructionYear} surface={surface} room={room} floorValue={floorValue} kommentar={kommentar} federalState={federalState} postalCode={postalCode} streetHouseNumber={streetHouseNumber} desiredPrice={desiredPrice} email={email} phoneNumber={phoneNumber} divisionDeclaration={divisionDeclaration} developmentPossible={developmentPossible} fileChange={fileChange} photosFilesChange={photosFilesChange} attachmentFilesChange={attachmentFilesChange} formSuccess={formSuccess} formSuccessMsg={formSuccessMsg}/>: null }
 
         <section className='banner' id='start'>
             <div className='container-fluid'>

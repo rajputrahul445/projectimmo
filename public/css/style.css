@@ -416,15 +416,20 @@ footer a {
     color: #000;
     font-weight: 500;
 }
-.form-floating>.form-control {
+.form-floating>.form-control, .fullInput input {
     border: none;
     border-bottom: solid 1px #ccc;
     border-radius: 0px;
     outline: none;
     box-shadow: none;
     padding: 0 5px;
+    display: block;
+    width: 100%;
+    font-size: 16px;
 }
-
+.fullInput input {
+    padding: 10px 0;
+}
 .form-floating>label {
     padding: 12px 0 0;
     font-size: 18px;

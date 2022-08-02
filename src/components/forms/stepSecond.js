@@ -1,24 +1,28 @@
-import React from 'react'
+import React from 'react';
+import FileBase64 from 'react-file-base64';
 
-const StepSecond = ({popupHandle, stepCount, nextStep, backStep, handleInputChange, kommentar, fileChange}) => {
+const StepSecond = ({popupHandle, stepCount, nextStep, backStep, handleInputChange, kommentar, fileChange, photosFilesChange, attachmentFilesChange}) => {
   return (
     <div className='form'>
-        <div className='form-group'>
-            <label className='steps-radio-title'>Grundrisse</label>
-            <input type='file' name='Grundrisse' accept='image/jpeg,image/gif,image/png,image/jpg,application/pdf' className='form-control' multiple onChange={(e)=>fileChange}/>
-            
+        <div className='form-group fullInput'>
+            <label className='steps-radio-title mb-0'>Grundrisse</label>
+            {/* <input type='file' name='Grundrisse' accept='image/jpeg,image/gif,image/png,image/jpg,application/pdf' className='form-control' multiple onChange={(e)=>fileChange(e)}/> */}
+            <FileBase64 multiple={ true } onDone={fileChange} />
+        </div>
+        <div className='form-group fullInput'>
+            <label className='steps-radio-title mb-0'>Fotos</label>
+            {/* <input type='file' name='Fotos' accept="image/jpeg,image/gif,image/png,image/jpg" className='form-control' multiple/>
+             */}
+            <FileBase64 multiple={ true } onDone={photosFilesChange} />
+        </div>
+        <div className='form-group fullInput'>
+            <label className='steps-radio-title mb-0'>Anhänge</label>
+            {/* <input type='file' name='Anhänge' className='form-control' multiple/> */}
+            <FileBase64 multiple={ true } onDone={attachmentFilesChange} />
         </div>
         <div className='form-group'>
-            <label className='steps-radio-title'>Fotos</label>
-            <input type='file' name='Fotos' accept="image/jpeg,image/gif,image/png,image/jpg" className='form-control' multiple/>
-        </div>
-        <div className='form-group'>
-            <label className='steps-radio-title'>Anhänge</label>
-            <input type='file' name='Anhänge' className='form-control' multiple/>
-        </div>
-        <div className='form-group'>
-            <label for='kommentar' className='steps-radio-title'>Kommentar</label>
-            <textarea id='kommentar' cols="30" rows="6" className="form-control comment" name='kommentar' value={kommentar} onChange={(e)=> handleInputChange(e)}></textarea>
+            <label htmlFor='kommentar' className='steps-radio-title'>Kommentar</label>
+            <textarea id='kommentar' cols="30" rows="4" className="form-control comment" name='kommentar' value={kommentar} onChange={(e)=> handleInputChange(e)}></textarea>
         </div>
         <ul className='listInline gap-10 justify-content-between'>
             {stepCount === 0

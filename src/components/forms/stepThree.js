@@ -5,15 +5,15 @@ const StepThree = ({popupHandle, stepCount, nextStep, backStep, handleInputChang
     <div className='form'>
         <div className='form-floating'>
             <input id='federalState' type='text' name='federalState' placeholder='Bundesland' className='form-control' onChange={(e)=> handleInputChange(e)} value={federalState}/>
-            <label for='federalState'>Bundesland</label>
+            <label htmlFor='federalState'>Bundesland</label>
         </div>
         <div className='form-floating'>
             <input id='postalCode' type='text' name='postalCode' placeholder='Postleitzahl' className='form-control' onChange={(e)=> handleInputChange(e)} value={postalCode}/>
-            <label for='postalCode'>Postleitzahl</label>
+            <label htmlFor='postalCode'>Postleitzahl</label>
         </div>
         <div className='form-floating'>
             <input id='streetHouseNumber' type='text' name='streetHouseNumber' placeholder='Straße und Hausnummer' className='form-control' onChange={(e)=> handleInputChange(e)} value={streetHouseNumber}/>
-            <label for='streetHouseNumber'>Straße und Hausnummer</label>
+            <label htmlFor='streetHouseNumber'>Straße und Hausnummer</label>
         </div>
         <ul className='mt-3 listInline gap-10 justify-content-between'>
             {stepCount === 0
